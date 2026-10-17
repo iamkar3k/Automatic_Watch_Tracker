@@ -1,0 +1,68 @@
+name: Check watch prices
+
+on:
+  schedule:
+    # 9:00, 13:00 and 17:00 Eastern. Each time is listed for EDT and EST; the
+    # script skips whichever run is not at the right Eastern hour.
+    - cron: "7 13,14 * * *"
+    - cron: "7 17,18 * * *"
+    - cron: "7 21,22 * * *"
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ["site/**"]
+
+permissions:
+  contents: write
+  issues: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: prices
+  cancel-in-progress: false
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    outputs:
+      ran: ${{ steps.run.outputs.ran }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - id: run
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then export FORCE=1; fi
+          if [ "${{ github.event_name }}" = "push" ]; then echo "ran=true" >> "$GITHUB_OUTPUT"; exit 0; fi
+          python scripts/check_prices.py
+      - name: Commit new prices
+        if: steps.run.outputs.ran == 'true' && github.event_name != 'push'
+        run: |
+          git config user.name "price-bot"
+          git config user.email "price-bot@users.noreply.github.com"
+          git add data/history.csv site/prices.json
+          git diff --cached --quiet || (git commit -m "Update prices" && git push)
+      - name: Open an issue for a new low
+        if: steps.run.outputs.ran == 'true' && hashFiles('alerts.md') != ''
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh issue create --title "New low price $(date -u +%Y-%m-%d)" --body-file alerts.md
+      - uses: actions/configure-pages@v5
+        if: steps.run.outputs.ran == 'true'
+      - uses: actions/upload-pages-artifact@v3
+        if: steps.run.outputs.ran == 'true'
+        with:
+          path: site
+
+  deploy:
+    needs: check
+    if: needs.check.outputs.ran == 'true'
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
