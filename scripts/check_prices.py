@@ -28,24 +28,28 @@ def get(url):
         raise
 
 
+_BROWSER = {}
+
+
 def get_browser(url):
-    from playwright.sync_api import sync_playwright
-    with sync_playwright() as pw:
-        browser = pw.chromium.launch()
-        page = browser.new_page(user_agent=UA, locale="en-US")
+    if "b" not in _BROWSER:
+        from playwright.sync_api import sync_playwright
+        _BROWSER["pw"] = sync_playwright().start()
+        _BROWSER["b"] = _BROWSER["pw"].chromium.launch()
+    page = _BROWSER["b"].new_page(user_agent=UA, locale="en-US")
+    try:
         resp = page.goto(url, wait_until="domcontentloaded", timeout=45000)
         if resp is None or resp.status >= 400:
             raise OSError(f"browser got HTTP {resp.status if resp else 'no response'}")
         if "json" in resp.headers.get("content-type", ""):
-            body = resp.text()
-        else:
-            try:
-                page.wait_for_load_state("networkidle", timeout=15000)
-            except Exception:
-                pass
-            body = page.content()
-        browser.close()
-        return body
+            return resp.text()
+        try:
+            page.wait_for_load_state("networkidle", timeout=15000)
+        except Exception:
+            pass
+        return page.content()
+    finally:
+        page.close()
 
 
 def num(x):
@@ -109,6 +113,27 @@ def from_shopify_search(src):
     return best[1] if best else None
 
 
+def from_search_page(src):
+    """Department-store search page. Finds the model on the page and reads the nearest in-range prices.
+
+    Prices outside src["bounds"] (derived from the watch's logged prices) are ignored so a shipping
+    threshold or a neighbouring product cannot be mistaken for the watch's price.
+    """
+    from urllib.parse import quote_plus
+    url = src["template"].format(q=quote_plus(src["query"]))
+    html = get(url)
+    lo, hi = src["bounds"]
+    pat = re.compile(src["match"], re.I)
+    best = None
+    for m in pat.finditer(html):
+        window = html[max(0, m.start() - 200): m.end() + 900]
+        prices = [num(x) for x in re.findall(r"\$\s?(\d{1,4}(?:,\d{3})*(?:\.\d{2})?)", window)]
+        prices = [p for p in prices if p and lo <= p <= hi]
+        if prices and (best is None or min(prices) < best[0]):
+            best = (min(prices), max(prices))
+    return (best[0], best[1], url, True) if best else None
+
+
 def from_page(src):
     html = get(src["url"])
     prices = []
@@ -142,17 +167,17 @@ def walk(node, acc):
 
 PARSERS = {"shopify_product": from_shopify_product,
            "shopify_collection": from_shopify_collection, "shopify_search": from_shopify_search,
-           "page": from_page}
+           "search_page": from_search_page, "page": from_page}
 
 
-def fetch(w):
+def fetch(w, bounds):
     """Check every source; return (offers, errors). Each offer is (price, regular, retailer, url, in_stock)."""
     offers, errors = [], []
     for src in w["sources"]:
-        where = src.get("url", src.get("base"))
+        where = src.get("url") or src.get("base") or src["template"]
         before = len(errors)
         try:
-            res = PARSERS[src["type"]](src)
+            res = PARSERS[src["type"]](dict(src, bounds=bounds))
             if res:
                 offers.append((res[0], res[1], src.get("retailer", w["retailer"]), res[2], res[3]))
             else:
@@ -177,7 +202,9 @@ def main():
     for w in watches:
         prior = [float(r["price"]) for r in rows if r["id"] == w["id"] and r["price"]]
         has_live = any(r["source"] == "live" for r in rows if r["id"] == w["id"])
-        offers, err = fetch(w)
+        seen = [float(r["price"]) for r in rows if r["id"] == w["id"] and r["price"]]
+        regs = [float(r["regular"]) for r in rows if r["id"] == w["id"] and r["regular"]]
+        offers, err = fetch(w, (0.5 * min(seen), 1.15 * max(regs + seen)))
         for price, regular, retailer, url, in_stock in offers:
             rows.append(dict(ts=ts, id=w["id"], price=f"{price:.2f}", regular=f"{regular:.2f}",
                              retailer=retailer, url=url, source="live", note="" if in_stock else "out of stock"))
