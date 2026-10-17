@@ -147,7 +147,8 @@ def from_page(src):
                     r'content=["\']([\d.,]+)["\'][^>]*property=["\'](?:product|og):price:amount',
                     r'itemprop=["\']price["\'][^>]*content=["\']([\d.,]+)'):
             prices += [num(m) for m in re.findall(pat, html, re.I)]
-    prices = [p for p in prices if p]
+    lo, hi = src.get("bounds", (0, 1e9))  # ignore related products and shipping thresholds
+    prices = [p for p in prices if p and lo <= p <= hi]
     return (min(prices), max(prices), src["url"], True) if prices else None
 
 

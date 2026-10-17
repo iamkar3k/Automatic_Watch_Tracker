@@ -13,6 +13,7 @@ ts,id,price,regular,retailer,url,source,note
 2026-10-17T01:00:00Z,tsuyosa,355,450,Majesty Jewelers,https://www.majestyjewelers.com/citizen-nj0151-53m,seed,From web search; unverified
 2026-10-17T01:00:00Z,bambino,295,455,Orient Watch USA,https://orientwatchusa.com/products/ra-ag0002s30b,seed,From web search; unverified
 2026-10-17T01:00:00Z,snxs,395,415,Seiko USA,https://seikousa.com/products/srpk89,seed,From web search; Seiko pages disagree 395 vs 415
+2026-10-17T01:00:00Z,srpl55,415,415,Seiko USA,https://seikousa.com/products/srpl55,seed,From web search; unverified
 2026-10-17T01:34:29Z,marlin1965,259.00,259.00,Timex.com,https://timex.com/products/marlin-1965-reissue-hand-wound-34mm-leather-strap-watch-tw2r47900,live,
 2026-10-17T01:34:29Z,mk1,309.00,309.00,Timex.com,https://timex.com/collections/mk1-watches,live,
 2026-10-17T01:34:29Z,draper,309.00,309.00,Timex.com,https://timex.com/collections/automatic-watches,live,

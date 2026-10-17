@@ -439,5 +439,50 @@
     "retailer": "Kohl's"
    }
   ]
+ },
+ {
+  "id": "srpl55",
+  "watch": "Seiko 5 Sports SRPL55",
+  "ref": "SRPL55",
+  "retailer": "Seiko USA",
+  "sources": [
+   {
+    "type": "page",
+    "url": "https://www.belk.com/p/seiko-seiko-5-sports-automatic-blue-dial-stainless-steel-case-bracelet/0480054057869.html",
+    "retailer": "Belk"
+   },
+   {
+    "type": "shopify_product",
+    "url": "https://seikousa.com/products/srpl55"
+   },
+   {
+    "type": "shopify_search",
+    "base": "https://teddybaldassarre.com",
+    "query": "SRPL55",
+    "retailer": "Teddy Baldassarre",
+    "match": "SRPL55"
+   },
+   {
+    "type": "search_page",
+    "template": "https://www.macys.com/shop/featured/{q}",
+    "query": "SRPL55",
+    "match": "SRPL55",
+    "retailer": "Macy's"
+   },
+   {
+    "type": "search_page",
+    "template": "https://www.jcpenney.com/s?searchTerm={q}",
+    "query": "SRPL55",
+    "match": "SRPL55",
+    "retailer": "JCPenney"
+   },
+   {
+    "type": "search_page",
+    "template": "https://www.kohls.com/search.jsp?search={q}",
+    "query": "SRPL55",
+    "match": "SRPL55",
+    "retailer": "Kohl's"
+   }
+  ]
  }
 ]
