@@ -2,11 +2,9 @@ name: Check watch prices
 
 on:
   schedule:
-    # 9:00, 13:00 and 17:00 Eastern. Each time is listed for EDT and EST; the
-    # script skips whichever run is not at the right Eastern hour.
-    - cron: "7 13,14 * * *"
-    - cron: "7 17,18 * * *"
-    - cron: "7 21,22 * * *"
+    # Hourly. GitHub's cron is best effort and often late or skipped, so the script's due()
+    # check decides whether the 9:00, 13:00 or 17:00 Eastern slot still needs its check.
+    - cron: "17 * * * *"
   workflow_dispatch:
   push:
     branches: [main]
@@ -32,11 +30,17 @@ jobs:
       - uses: actions/setup-python@v6
         with:
           python-version: "3.12"
+      - id: gate
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then export FORCE=1; fi
+          if [ "${{ github.event_name }}" = "push" ]; then echo "due=true" >> "$GITHUB_OUTPUT"; else python scripts/check_prices.py --due; fi
       - name: Install browser for sites that block plain requests
+        if: steps.gate.outputs.due == 'true' && github.event_name != 'push'
         run: |
           pip install playwright
           playwright install --with-deps chromium
       - id: run
+        if: steps.gate.outputs.due == 'true'
         run: |
           if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then export FORCE=1; fi
           if [ "${{ github.event_name }}" = "push" ]; then echo "ran=true" >> "$GITHUB_OUTPUT"; exit 0; fi
