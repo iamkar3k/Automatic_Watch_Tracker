@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-17T01:57:00Z",
+ "updated": "2026-10-17T02:01:58Z",
  "watches": [
   {
    "id": "marlin1965",
@@ -12,7 +12,7 @@
    "off_regular": 0.0,
    "status": "at_low",
    "buy_url": "https://timex.com/products/marlin-1965-reissue-hand-wound-34mm-leather-strap-watch-tw2r47900",
-   "checked": "2026-10-17T01:57:00Z",
+   "checked": "2026-10-17T02:01:58Z",
    "stale": false,
    "in_stock": true,
    "note": "",
@@ -40,6 +40,10 @@
     [
      "2026-10-17T01:57:00Z",
      259.0
+    ],
+    [
+     "2026-10-17T02:01:58Z",
+     259.0
     ]
    ]
   },
@@ -54,7 +58,7 @@
    "off_regular": 0.0,
    "status": "above",
    "buy_url": "https://timex.com/collections/mk1-watches",
-   "checked": "2026-10-17T01:57:00Z",
+   "checked": "2026-10-17T02:01:58Z",
    "stale": false,
    "in_stock": true,
    "note": "",
@@ -82,6 +86,10 @@
     [
      "2026-10-17T01:57:00Z",
      309.0
+    ],
+    [
+     "2026-10-17T02:01:58Z",
+     309.0
     ]
    ]
   },
@@ -96,7 +104,7 @@
    "off_regular": 0.0,
    "status": "above",
    "buy_url": "https://timex.com/collections/automatic-watches",
-   "checked": "2026-10-17T01:57:00Z",
+   "checked": "2026-10-17T02:01:58Z",
    "stale": false,
    "in_stock": true,
    "note": "",
@@ -124,6 +132,10 @@
     [
      "2026-10-17T01:57:00Z",
      309.0
+    ],
+    [
+     "2026-10-17T02:01:58Z",
+     309.0
     ]
    ]
   },
@@ -138,7 +150,7 @@
    "off_regular": 0.0,
    "status": "at_low",
    "buy_url": "https://timex.com/collections/timex-e-line",
-   "checked": "2026-10-17T01:57:00Z",
+   "checked": "2026-10-17T02:01:58Z",
    "stale": false,
    "in_stock": true,
    "note": "",
@@ -166,6 +178,10 @@
     [
      "2026-10-17T01:57:00Z",
      379.0
+    ],
+    [
+     "2026-10-17T02:01:58Z",
+     379.0
     ]
    ]
   },
@@ -183,7 +199,7 @@
    "checked": "2026-10-17T01:00:00Z",
    "stale": true,
    "in_stock": true,
-   "note": "",
+   "note": "casio.com: HTTP 403; no price at teddybaldassarre.com; macys.com: HTTP 403; no price at belk.com; jcpenney.com: Page.goto: net::ERR_HTTP2_PROTOCOL_ERROR at https://www.jcpe; kohls.com: HTTP 403",
    "offers": [],
    "history": [
     [
@@ -206,7 +222,7 @@
    "checked": "2026-10-17T01:00:00Z",
    "stale": true,
    "in_stock": true,
-   "note": "",
+   "note": "casio.com: HTTP 403; no price at teddybaldassarre.com; macys.com: HTTP 403; no price at belk.com; jcpenney.com: Page.goto: net::ERR_HTTP2_PROTOCOL_ERROR at https://www.jcpe; kohls.com: HTTP 403",
    "offers": [],
    "history": [
     [
@@ -229,7 +245,7 @@
    "checked": "2026-10-17T01:00:00Z",
    "stale": true,
    "in_stock": true,
-   "note": "",
+   "note": "casio.com: HTTP 403; no price at teddybaldassarre.com; macys.com: HTTP 403; no price at belk.com; jcpenney.com: Page.goto: net::ERR_HTTP2_PROTOCOL_ERROR at https://www.jcpe; kohls.com: HTTP 403",
    "offers": [],
    "history": [
     [
@@ -252,7 +268,7 @@
    "checked": "2026-10-17T01:00:00Z",
    "stale": true,
    "in_stock": true,
-   "note": "",
+   "note": "casio.com: HTTP 403; no price at teddybaldassarre.com; macys.com: HTTP 403; no price at belk.com; jcpenney.com: Page.goto: net::ERR_HTTP2_PROTOCOL_ERROR at https://www.jcpe; kohls.com: HTTP 403",
    "offers": [],
    "history": [
     [
@@ -272,7 +288,7 @@
    "off_regular": 0.0,
    "status": "above",
    "buy_url": "https://www.majestyjewelers.com/citizen-nj0151-53m",
-   "checked": "2026-10-17T01:57:00Z",
+   "checked": "2026-10-17T02:01:58Z",
    "stale": false,
    "in_stock": true,
    "note": "",
@@ -300,6 +316,10 @@
     [
      "2026-10-17T01:57:00Z",
      355.0
+    ],
+    [
+     "2026-10-17T02:01:58Z",
+     355.0
     ]
    ]
   },
@@ -314,7 +334,7 @@
    "off_regular": 35.2,
    "status": "at_low",
    "buy_url": "https://orientwatchusa.com/products/ra-ag0002s30b",
-   "checked": "2026-10-17T01:57:00Z",
+   "checked": "2026-10-17T02:01:58Z",
    "stale": false,
    "in_stock": true,
    "note": "",
@@ -342,6 +362,10 @@
     [
      "2026-10-17T01:57:00Z",
      295.0
+    ],
+    [
+     "2026-10-17T02:01:58Z",
+     295.0
     ]
    ]
   },
@@ -356,7 +380,7 @@
    "off_regular": 0.0,
    "status": "above",
    "buy_url": "https://seikousa.com/products/srpk89",
-   "checked": "2026-10-17T01:57:00Z",
+   "checked": "2026-10-17T02:01:58Z",
    "stale": false,
    "in_stock": false,
    "note": "",
@@ -379,6 +403,10 @@
     ],
     [
      "2026-10-17T01:57:00Z",
+     415.0
+    ],
+    [
+     "2026-10-17T02:01:58Z",
      415.0
     ]
    ]
