@@ -31,6 +31,7 @@ svg{width:100%;height:44px}
 a.buy{align-self:flex-start;padding:7px 14px;border:1px solid var(--ok);color:var(--ok);border-radius:8px;text-decoration:none}
 a.buy:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
 .offers{display:flex;gap:6px 12px;flex-wrap:wrap;font-size:.8rem}.offers a{color:var(--accent)}
+.chk{align-self:flex-start;color:var(--accent);font-size:.9rem}
 .wait{color:var(--muted);font-size:.85rem}
 footer{color:var(--muted);font-size:.8rem;margin-top:20px}
 </style>
@@ -59,19 +60,22 @@ fetch("prices.json",{cache:"no-store"}).then(r=>r.json()).then(d=>{
   const atLow=d.watches.filter(w=>w.status!=="above").length;
   document.getElementById("sub").textContent=`${atLow} of ${d.watches.length} watches are at their lowest price seen. Updated ${new Date(d.updated).toLocaleString("en-US",{timeZone:"America/New_York",dateStyle:"medium",timeStyle:"short"})} ET.`;
   d.watches.forEach(w=>{
-    const best=w.status!=="above";const buy=best&&w.in_stock!==false;
-    const c=el("div","card"+(best?" best":""));
+    const best=w.status!=="above";const buy=best&&w.in_stock!==false&&!w.stale;
+    const c=el("div","card"+(best&&!w.stale?" best":""));
     const top=el("div","top"),L=el("div");
     L.append(el("h2",null,w.watch),el("span","ref",`${w.ref} · ${w.retailer}`));
-    top.append(L,el("span","pill "+(best?"best":"above"),w.status==="new_low"?"New low":best?"At lowest seen":"Above past low"));
+    top.append(L,el("span","pill "+(w.stale?"":best?"best":"above"),w.stale?"Last known price":w.status==="new_low"?"New low":best?"At lowest seen":"Above past low"));
     c.append(top,el("span","k","Today"),el("div","price",usd(w.today)));
     const r=el("div","row");
     [["Past low",w.past_low],["Regular",w.regular]].forEach(([k,v])=>{const x=el("div");x.append(el("span","k",k),el("span","v",usd(v)));r.append(x)});
     c.append(r);
     if(w.offers&&w.offers.length>1){const o=el("div","offers");w.offers.forEach(f=>{const a=el("a",null,`${f.retailer} ${usd(f.price)}`);a.href=f.url;a.target="_blank";a.rel="noopener noreferrer";o.append(a)});c.append(o)}
     const sp=spark(w.history);if(sp)c.append(sp);
-    if(w.stale)c.append(el("p","note warn","Live check failed; showing the last known price. "+w.note));
+    if(w.stale){c.append(el("p","note warn","Live check failed, so this price may be out of date."));
+      if(w.note)c.append(Object.assign(el("details","note"),{innerHTML:""}));
+      if(w.note){const d=c.lastChild;d.append(el("summary",null,"Why"),el("span",null,w.note))}}
     if(buy){const a=el("a","buy","Buy at "+w.retailer);a.href=w.buy_url;a.target="_blank";a.rel="noopener noreferrer";c.append(a)}
+    else if(w.stale){const a=el("a","chk","Check price at "+w.retailer);a.href=w.buy_url;a.target="_blank";a.rel="noopener noreferrer";c.append(a)}
     else c.append(el("span","wait",w.in_stock===false?"Out of stock":"Wait for a lower price"));
     g.append(c);
   });
