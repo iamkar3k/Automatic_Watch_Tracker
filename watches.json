@@ -15,6 +15,41 @@
     "query": "TW2R47900",
     "retailer": "Teddy Baldassarre",
     "match": "TW2R47900"
+   },
+   {
+    "type": "search_page",
+    "template": "https://www.macys.com/shop/featured/{q}",
+    "query": "TW2R47900",
+    "match": "TW2R47900",
+    "retailer": "Macy's"
+   },
+   {
+    "type": "search_page",
+    "template": "https://www.belk.com/search/?q={q}",
+    "query": "TW2R47900",
+    "match": "TW2R47900",
+    "retailer": "Belk"
+   },
+   {
+    "type": "search_page",
+    "template": "https://www.jcpenney.com/s?searchTerm={q}",
+    "query": "TW2R47900",
+    "match": "TW2R47900",
+    "retailer": "JCPenney"
+   },
+   {
+    "type": "search_page",
+    "template": "https://www.kohls.com/search.jsp?search={q}",
+    "query": "TW2R47900",
+    "match": "TW2R47900",
+    "retailer": "Kohl's"
+   },
+   {
+    "type": "search_page",
+    "template": "https://www.jomashop.com/catalogsearch/result/?q={q}",
+    "query": "TW2R47900",
+    "match": "TW2R47900",
+    "retailer": "Jomashop"
    }
   ]
  },
@@ -35,6 +70,41 @@
     "query": "Timex MK1 Automatic",
     "retailer": "Teddy Baldassarre",
     "match": "MK1.*Automatic|Automatic.*MK1"
+   },
+   {
+    "type": "search_page",
+    "template": "https://www.macys.com/shop/featured/{q}",
+    "query": "Timex MK1 Automatic",
+    "match": "MK1.*Automatic|Automatic.*MK1",
+    "retailer": "Macy's"
+   },
+   {
+    "type": "search_page",
+    "template": "https://www.belk.com/search/?q={q}",
+    "query": "Timex MK1 Automatic",
+    "match": "MK1.*Automatic|Automatic.*MK1",
+    "retailer": "Belk"
+   },
+   {
+    "type": "search_page",
+    "template": "https://www.jcpenney.com/s?searchTerm={q}",
+    "query": "Timex MK1 Automatic",
+    "match": "MK1.*Automatic|Automatic.*MK1",
+    "retailer": "JCPenney"
+   },
+   {
+    "type": "search_page",
+    "template": "https://www.kohls.com/search.jsp?search={q}",
+    "query": "Timex MK1 Automatic",
+    "match": "MK1.*Automatic|Automatic.*MK1",
+    "retailer": "Kohl's"
+   },
+   {
+    "type": "search_page",
+    "template": "https://www.jomashop.com/catalogsearch/result/?q={q}",
+    "query": "Timex MK1 Automatic",
+    "match": "MK1.*Automatic|Automatic.*MK1",
+    "retailer": "Jomashop"
    }
   ]
  },
@@ -55,6 +125,41 @@
     "query": "Marlin Draper",
     "retailer": "Teddy Baldassarre",
     "match": "Draper"
+   },
+   {
+    "type": "search_page",
+    "template": "https://www.macys.com/shop/featured/{q}",
+    "query": "Marlin Draper",
+    "match": "Draper",
+    "retailer": "Macy's"
+   },
+   {
+    "type": "search_page",
+    "template": "https://www.belk.com/search/?q={q}",
+    "query": "Marlin Draper",
+    "match": "Draper",
+    "retailer": "Belk"
+   },
+   {
+    "type": "search_page",
+    "template": "https://www.jcpenney.com/s?searchTerm={q}",
+    "query": "Marlin Draper",
+    "match": "Draper",
+    "retailer": "JCPenney"
+   },
+   {
+    "type": "search_page",
+    "template": "https://www.kohls.com/search.jsp?search={q}",
+    "query": "Marlin Draper",
+    "match": "Draper",
+    "retailer": "Kohl's"
+   },
+   {
+    "type": "search_page",
+    "template": "https://www.jomashop.com/catalogsearch/result/?q={q}",
+    "query": "Marlin Draper",
+    "match": "Draper",
+    "retailer": "Jomashop"
    }
   ]
  },
@@ -75,6 +180,41 @@
     "query": "Timex Automatic E Line 38mm",
     "retailer": "Teddy Baldassarre",
     "match": "E[- ]?Line.*38\\s?mm|38\\s?mm.*E[- ]?Line"
+   },
+   {
+    "type": "search_page",
+    "template": "https://www.macys.com/shop/featured/{q}",
+    "query": "Timex Automatic E Line 38mm",
+    "match": "E[- ]?Line.*38\\s?mm|38\\s?mm.*E[- ]?Line",
+    "retailer": "Macy's"
+   },
+   {
+    "type": "search_page",
+    "template": "https://www.belk.com/search/?q={q}",
+    "query": "Timex Automatic E Line 38mm",
+    "match": "E[- ]?Line.*38\\s?mm|38\\s?mm.*E[- ]?Line",
+    "retailer": "Belk"
+   },
+   {
+    "type": "search_page",
+    "template": "https://www.jcpenney.com/s?searchTerm={q}",
+    "query": "Timex Automatic E Line 38mm",
+    "match": "E[- ]?Line.*38\\s?mm|38\\s?mm.*E[- ]?Line",
+    "retailer": "JCPenney"
+   },
+   {
+    "type": "search_page",
+    "template": "https://www.kohls.com/search.jsp?search={q}",
+    "query": "Timex Automatic E Line 38mm",
+    "match": "E[- ]?Line.*38\\s?mm|38\\s?mm.*E[- ]?Line",
+    "retailer": "Kohl's"
+   },
+   {
+    "type": "search_page",
+    "template": "https://www.jomashop.com/catalogsearch/result/?q={q}",
+    "query": "Timex Automatic E Line 38mm",
+    "match": "E[- ]?Line.*38\\s?mm|38\\s?mm.*E[- ]?Line",
+    "retailer": "Jomashop"
    }
   ]
  },
@@ -94,6 +234,41 @@
     "query": "F-B100W-1B",
     "retailer": "Teddy Baldassarre",
     "match": "F[- ]?B100W[- ]?1B"
+   },
+   {
+    "type": "search_page",
+    "template": "https://www.macys.com/shop/featured/{q}",
+    "query": "F-B100W-1B",
+    "match": "F[- ]?B100W[- ]?1B",
+    "retailer": "Macy's"
+   },
+   {
+    "type": "search_page",
+    "template": "https://www.belk.com/search/?q={q}",
+    "query": "F-B100W-1B",
+    "match": "F[- ]?B100W[- ]?1B",
+    "retailer": "Belk"
+   },
+   {
+    "type": "search_page",
+    "template": "https://www.jcpenney.com/s?searchTerm={q}",
+    "query": "F-B100W-1B",
+    "match": "F[- ]?B100W[- ]?1B",
+    "retailer": "JCPenney"
+   },
+   {
+    "type": "search_page",
+    "template": "https://www.kohls.com/search.jsp?search={q}",
+    "query": "F-B100W-1B",
+    "match": "F[- ]?B100W[- ]?1B",
+    "retailer": "Kohl's"
+   },
+   {
+    "type": "search_page",
+    "template": "https://www.jomashop.com/catalogsearch/result/?q={q}",
+    "query": "F-B100W-1B",
+    "match": "F[- ]?B100W[- ]?1B",
+    "retailer": "Jomashop"
    }
   ]
  },
@@ -113,6 +288,41 @@
     "query": "F-B100W-1A",
     "retailer": "Teddy Baldassarre",
     "match": "F[- ]?B100W[- ]?1A"
+   },
+   {
+    "type": "search_page",
+    "template": "https://www.macys.com/shop/featured/{q}",
+    "query": "F-B100W-1A",
+    "match": "F[- ]?B100W[- ]?1A",
+    "retailer": "Macy's"
+   },
+   {
+    "type": "search_page",
+    "template": "https://www.belk.com/search/?q={q}",
+    "query": "F-B100W-1A",
+    "match": "F[- ]?B100W[- ]?1A",
+    "retailer": "Belk"
+   },
+   {
+    "type": "search_page",
+    "template": "https://www.jcpenney.com/s?searchTerm={q}",
+    "query": "F-B100W-1A",
+    "match": "F[- ]?B100W[- ]?1A",
+    "retailer": "JCPenney"
+   },
+   {
+    "type": "search_page",
+    "template": "https://www.kohls.com/search.jsp?search={q}",
+    "query": "F-B100W-1A",
+    "match": "F[- ]?B100W[- ]?1A",
+    "retailer": "Kohl's"
+   },
+   {
+    "type": "search_page",
+    "template": "https://www.jomashop.com/catalogsearch/result/?q={q}",
+    "query": "F-B100W-1A",
+    "match": "F[- ]?B100W[- ]?1A",
+    "retailer": "Jomashop"
    }
   ]
  },
@@ -132,6 +342,41 @@
     "query": "EFK-110D-1A",
     "retailer": "Teddy Baldassarre",
     "match": "EFK[- ]?110D[- ]?1A"
+   },
+   {
+    "type": "search_page",
+    "template": "https://www.macys.com/shop/featured/{q}",
+    "query": "EFK-110D-1A",
+    "match": "EFK[- ]?110D[- ]?1A",
+    "retailer": "Macy's"
+   },
+   {
+    "type": "search_page",
+    "template": "https://www.belk.com/search/?q={q}",
+    "query": "EFK-110D-1A",
+    "match": "EFK[- ]?110D[- ]?1A",
+    "retailer": "Belk"
+   },
+   {
+    "type": "search_page",
+    "template": "https://www.jcpenney.com/s?searchTerm={q}",
+    "query": "EFK-110D-1A",
+    "match": "EFK[- ]?110D[- ]?1A",
+    "retailer": "JCPenney"
+   },
+   {
+    "type": "search_page",
+    "template": "https://www.kohls.com/search.jsp?search={q}",
+    "query": "EFK-110D-1A",
+    "match": "EFK[- ]?110D[- ]?1A",
+    "retailer": "Kohl's"
+   },
+   {
+    "type": "search_page",
+    "template": "https://www.jomashop.com/catalogsearch/result/?q={q}",
+    "query": "EFK-110D-1A",
+    "match": "EFK[- ]?110D[- ]?1A",
+    "retailer": "Jomashop"
    }
   ]
  },
@@ -151,6 +396,41 @@
     "query": "EFK-110D-2A",
     "retailer": "Teddy Baldassarre",
     "match": "EFK[- ]?110D[- ]?2A"
+   },
+   {
+    "type": "search_page",
+    "template": "https://www.macys.com/shop/featured/{q}",
+    "query": "EFK-110D-2A",
+    "match": "EFK[- ]?110D[- ]?2A",
+    "retailer": "Macy's"
+   },
+   {
+    "type": "search_page",
+    "template": "https://www.belk.com/search/?q={q}",
+    "query": "EFK-110D-2A",
+    "match": "EFK[- ]?110D[- ]?2A",
+    "retailer": "Belk"
+   },
+   {
+    "type": "search_page",
+    "template": "https://www.jcpenney.com/s?searchTerm={q}",
+    "query": "EFK-110D-2A",
+    "match": "EFK[- ]?110D[- ]?2A",
+    "retailer": "JCPenney"
+   },
+   {
+    "type": "search_page",
+    "template": "https://www.kohls.com/search.jsp?search={q}",
+    "query": "EFK-110D-2A",
+    "match": "EFK[- ]?110D[- ]?2A",
+    "retailer": "Kohl's"
+   },
+   {
+    "type": "search_page",
+    "template": "https://www.jomashop.com/catalogsearch/result/?q={q}",
+    "query": "EFK-110D-2A",
+    "match": "EFK[- ]?110D[- ]?2A",
+    "retailer": "Jomashop"
    }
   ]
  },
@@ -175,6 +455,41 @@
     "query": "NJ0151-53M",
     "retailer": "Teddy Baldassarre",
     "match": "NJ0151[- ]?53M"
+   },
+   {
+    "type": "search_page",
+    "template": "https://www.macys.com/shop/featured/{q}",
+    "query": "NJ0151-53M",
+    "match": "NJ0151[- ]?53M",
+    "retailer": "Macy's"
+   },
+   {
+    "type": "search_page",
+    "template": "https://www.belk.com/search/?q={q}",
+    "query": "NJ0151-53M",
+    "match": "NJ0151[- ]?53M",
+    "retailer": "Belk"
+   },
+   {
+    "type": "search_page",
+    "template": "https://www.jcpenney.com/s?searchTerm={q}",
+    "query": "NJ0151-53M",
+    "match": "NJ0151[- ]?53M",
+    "retailer": "JCPenney"
+   },
+   {
+    "type": "search_page",
+    "template": "https://www.kohls.com/search.jsp?search={q}",
+    "query": "NJ0151-53M",
+    "match": "NJ0151[- ]?53M",
+    "retailer": "Kohl's"
+   },
+   {
+    "type": "search_page",
+    "template": "https://www.jomashop.com/catalogsearch/result/?q={q}",
+    "query": "NJ0151-53M",
+    "match": "NJ0151[- ]?53M",
+    "retailer": "Jomashop"
    }
   ]
  },
@@ -194,6 +509,41 @@
     "query": "RA-AG0002S30B",
     "retailer": "Teddy Baldassarre",
     "match": "RA[- ]?AG0002S30B"
+   },
+   {
+    "type": "search_page",
+    "template": "https://www.macys.com/shop/featured/{q}",
+    "query": "RA-AG0002S30B",
+    "match": "RA[- ]?AG0002S30B",
+    "retailer": "Macy's"
+   },
+   {
+    "type": "search_page",
+    "template": "https://www.belk.com/search/?q={q}",
+    "query": "RA-AG0002S30B",
+    "match": "RA[- ]?AG0002S30B",
+    "retailer": "Belk"
+   },
+   {
+    "type": "search_page",
+    "template": "https://www.jcpenney.com/s?searchTerm={q}",
+    "query": "RA-AG0002S30B",
+    "match": "RA[- ]?AG0002S30B",
+    "retailer": "JCPenney"
+   },
+   {
+    "type": "search_page",
+    "template": "https://www.kohls.com/search.jsp?search={q}",
+    "query": "RA-AG0002S30B",
+    "match": "RA[- ]?AG0002S30B",
+    "retailer": "Kohl's"
+   },
+   {
+    "type": "search_page",
+    "template": "https://www.jomashop.com/catalogsearch/result/?q={q}",
+    "query": "RA-AG0002S30B",
+    "match": "RA[- ]?AG0002S30B",
+    "retailer": "Jomashop"
    }
   ]
  },
@@ -213,6 +563,41 @@
     "query": "SRPK89",
     "retailer": "Teddy Baldassarre",
     "match": "SRPK89"
+   },
+   {
+    "type": "search_page",
+    "template": "https://www.macys.com/shop/featured/{q}",
+    "query": "SRPK89",
+    "match": "SRPK89",
+    "retailer": "Macy's"
+   },
+   {
+    "type": "search_page",
+    "template": "https://www.belk.com/search/?q={q}",
+    "query": "SRPK89",
+    "match": "SRPK89",
+    "retailer": "Belk"
+   },
+   {
+    "type": "search_page",
+    "template": "https://www.jcpenney.com/s?searchTerm={q}",
+    "query": "SRPK89",
+    "match": "SRPK89",
+    "retailer": "JCPenney"
+   },
+   {
+    "type": "search_page",
+    "template": "https://www.kohls.com/search.jsp?search={q}",
+    "query": "SRPK89",
+    "match": "SRPK89",
+    "retailer": "Kohl's"
+   },
+   {
+    "type": "search_page",
+    "template": "https://www.jomashop.com/catalogsearch/result/?q={q}",
+    "query": "SRPK89",
+    "match": "SRPK89",
+    "retailer": "Jomashop"
    }
   ]
  }
