@@ -43,24 +43,18 @@
    "id": "mk1",
    "watch": "MK1 Automatic",
    "ref": "TW2Y71800",
-   "retailer": "Belk",
-   "today": 174.0,
-   "past_low": 174.0,
-   "regular": 200.0,
-   "off_regular": 13.0,
-   "status": "new_low",
-   "buy_url": "https://www.belk.com/search/?q=Timex+MK1+Automatic",
+   "retailer": "Timex.com",
+   "today": 309.0,
+   "past_low": 299.0,
+   "regular": 309.0,
+   "off_regular": 0.0,
+   "status": "above",
+   "buy_url": "https://timex.com/collections/mk1-watches",
    "checked": "2026-10-17T01:48:32Z",
    "stale": false,
    "in_stock": true,
    "note": "",
    "offers": [
-    {
-     "retailer": "Belk",
-     "price": 174.0,
-     "url": "https://www.belk.com/search/?q=Timex+MK1+Automatic",
-     "in_stock": true
-    },
     {
      "retailer": "Timex.com",
      "price": 309.0,
@@ -79,7 +73,7 @@
     ],
     [
      "2026-10-17T01:48:32Z",
-     174.0
+     309.0
     ]
    ]
   },
@@ -125,24 +119,18 @@
    "id": "eline",
    "watch": "Timex Automatic E Line",
    "ref": "38mm",
-   "retailer": "Belk",
-   "today": 196.0,
-   "past_low": 196.0,
-   "regular": 200.0,
-   "off_regular": 2.0,
-   "status": "new_low",
-   "buy_url": "https://www.belk.com/search/?q=Timex+Automatic+E+Line+38mm",
+   "retailer": "Timex.com",
+   "today": 379.0,
+   "past_low": 379.0,
+   "regular": 379.0,
+   "off_regular": 0.0,
+   "status": "at_low",
+   "buy_url": "https://timex.com/collections/timex-e-line",
    "checked": "2026-10-17T01:48:32Z",
    "stale": false,
    "in_stock": true,
    "note": "",
    "offers": [
-    {
-     "retailer": "Belk",
-     "price": 196.0,
-     "url": "https://www.belk.com/search/?q=Timex+Automatic+E+Line+38mm",
-     "in_stock": true
-    },
     {
      "retailer": "Timex.com",
      "price": 379.0,
@@ -161,7 +149,7 @@
     ],
     [
      "2026-10-17T01:48:32Z",
-     196.0
+     379.0
     ]
    ]
   },
@@ -179,7 +167,7 @@
    "checked": "2026-10-17T01:00:00Z",
    "stale": true,
    "in_stock": true,
-   "note": "https://www.casio.com/us/watches/casio/product.F-B100W-1B/: OSError browser got HTTP 403; no price at https://teddybaldassarre.com; https://www.macys.com/shop/featured/{q}: OSError browser got HTTP 403; no price at https://www.belk.com/search/?q={q}; https://www.jcpenney.com/s?searchTerm={q}: Error ",
+   "note": "",
    "offers": [],
    "history": [
     [
@@ -202,7 +190,7 @@
    "checked": "2026-10-17T01:00:00Z",
    "stale": true,
    "in_stock": true,
-   "note": "https://www.casio.com/us/watches/casio/product.F-B100W-1A/: OSError browser got HTTP 403; no price at https://teddybaldassarre.com; https://www.macys.com/shop/featured/{q}: OSError browser got HTTP 403; no price at https://www.belk.com/search/?q={q}; https://www.jcpenney.com/s?searchTerm={q}: Error ",
+   "note": "",
    "offers": [],
    "history": [
     [
@@ -225,7 +213,7 @@
    "checked": "2026-10-17T01:00:00Z",
    "stale": true,
    "in_stock": true,
-   "note": "https://www.casio.com/us/watches/edifice/product.EFK-110D-1A/: OSError browser got HTTP 403; no price at https://teddybaldassarre.com; https://www.macys.com/shop/featured/{q}: OSError browser got HTTP 403; https://www.belk.com/search/?q={q}: OSError browser got HTTP 403; https://www.jcpenney.com/s?s",
+   "note": "",
    "offers": [],
    "history": [
     [
@@ -248,7 +236,7 @@
    "checked": "2026-10-17T01:00:00Z",
    "stale": true,
    "in_stock": true,
-   "note": "https://www.casio.com/us/watches/edifice/product.EFK-110D-2A/: OSError browser got HTTP 403; no price at https://teddybaldassarre.com; https://www.macys.com/shop/featured/{q}: OSError browser got HTTP 403; https://www.belk.com/search/?q={q}: OSError browser got HTTP 403; https://www.jcpenney.com/s?s",
+   "note": "",
    "offers": [],
    "history": [
     [

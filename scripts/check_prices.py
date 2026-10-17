@@ -5,6 +5,7 @@ outside those hours. Writes alerts.md when a watch hits a strictly lower price
 than anything logged before.
 """
 import csv, json, os, re, sys, urllib.error, urllib.request
+from urllib.parse import urlparse
 from datetime import datetime, timezone
 from pathlib import Path
 from zoneinfo import ZoneInfo
@@ -174,7 +175,7 @@ def fetch(w, bounds):
     """Check every source; return (offers, errors). Each offer is (price, regular, retailer, url, in_stock)."""
     offers, errors = [], []
     for src in w["sources"]:
-        where = src.get("url") or src.get("base") or src["template"]
+        where = urlparse(src.get("url") or src.get("base") or src["template"]).netloc.removeprefix("www.")
         before = len(errors)
         try:
             res = PARSERS[src["type"]](dict(src, bounds=bounds))
@@ -183,7 +184,7 @@ def fetch(w, bounds):
             else:
                 errors.append(f"no price at {where}")
         except Exception as e:  # network error, 403, bad JSON
-            errors.append(f"{where}: {type(e).__name__} {e}")
+            errors.append(f"{where}: {str(e).replace('browser got ', '')[:60]}")
         if len(errors) > before:
             print(f"  {w['id']}: {errors[-1]}", file=sys.stderr)
     return offers, "; ".join(errors)[:300]
@@ -191,26 +192,34 @@ def fetch(w, bounds):
 
 def main():
     now = datetime.now(timezone.utc)
-    if os.environ.get("FORCE") != "1" and now.astimezone(ZoneInfo("America/New_York")).hour not in RUN_HOURS:
+    rebuild = os.environ.get("REBUILD") == "1"  # regenerate site/prices.json from history without fetching
+    if os.environ.get("FORCE") != "1" and not rebuild and now.astimezone(ZoneInfo("America/New_York")).hour not in RUN_HOURS:
         print("Outside the 9/13/17 ET run hours; skipping.")
         Path(os.environ.get("GITHUB_OUTPUT", os.devnull)).open("a").write("ran=false\n")
         return
     watches = json.loads((ROOT / "watches.json").read_text())
     rows = list(csv.DictReader(HIST.open()))
     ts = now.strftime("%Y-%m-%dT%H:%M:%SZ")
+    if rebuild:
+        ts = max(r["ts"] for r in rows if r["source"] == "live")
     alerts, summary = [], []
     for w in watches:
         prior = [float(r["price"]) for r in rows if r["id"] == w["id"] and r["price"]]
         has_live = any(r["source"] == "live" for r in rows if r["id"] == w["id"])
         seen = [float(r["price"]) for r in rows if r["id"] == w["id"] and r["price"]]
         regs = [float(r["regular"]) for r in rows if r["id"] == w["id"] and r["regular"]]
-        offers, err = fetch(w, (0.5 * min(seen), 1.15 * max(regs + seen)))
-        for price, regular, retailer, url, in_stock in offers:
+        if rebuild:
+            offers = [(float(r["price"]), float(r["regular"]), r["retailer"], r["url"], r["note"] != "out of stock")
+                      for r in rows if r["id"] == w["id"] and r["ts"] == ts and r["source"] == "live"]
+            err = ""
+        else:
+            offers, err = fetch(w, (0.5 * min(seen), 1.15 * max(regs + seen)))
+        for price, regular, retailer, url, in_stock in ([] if rebuild else offers):
             rows.append(dict(ts=ts, id=w["id"], price=f"{price:.2f}", regular=f"{regular:.2f}",
                              retailer=retailer, url=url, source="live", note="" if in_stock else "out of stock"))
         if offers:
             price, _, retailer, url, in_stock = min(offers, key=lambda o: (not o[4], o[0]))
-            if in_stock and has_live and price < min(prior):  # first live run only replaces unverified seeds
+            if not rebuild and in_stock and has_live and price < min(prior):  # first live run only replaces unverified seeds
                 alerts.append(f"- **{w['watch']}**: ${price:.2f} at {retailer} (previous low ${min(prior):.2f}). [Buy]({url})")
         else:
             print(f"FAILED {w['id']}: {err}", file=sys.stderr)
@@ -242,7 +251,7 @@ def main():
                         today=price, past_low=min(past_low, price), regular=regular,
                         off_regular=round(100 * (regular - price) / regular, 1) if regular else 0,
                         status=status, buy_url=url, checked=checked, stale=not offers, in_stock=in_stock,
-                        note="" if offers else err,
+                        note="" if offers else err[:200],
                         offers=[dict(retailer=r["retailer"], price=float(r["price"]), url=r["url"], in_stock=r["note"] != "out of stock")
                                 for r in sorted((r for r in hist if r["ts"] == ts), key=lambda r: float(r["price"]))],
                         history=[[t, p] for t, p in by_ts.items()]))
