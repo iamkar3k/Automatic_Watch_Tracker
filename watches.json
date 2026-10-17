@@ -70,41 +70,6 @@
     "query": "Timex MK1 Automatic",
     "retailer": "Teddy Baldassarre",
     "match": "MK1.*Automatic|Automatic.*MK1"
-   },
-   {
-    "type": "search_page",
-    "template": "https://www.macys.com/shop/featured/{q}",
-    "query": "Timex MK1 Automatic",
-    "match": "MK1.*Automatic|Automatic.*MK1",
-    "retailer": "Macy's"
-   },
-   {
-    "type": "search_page",
-    "template": "https://www.belk.com/search/?q={q}",
-    "query": "Timex MK1 Automatic",
-    "match": "MK1.*Automatic|Automatic.*MK1",
-    "retailer": "Belk"
-   },
-   {
-    "type": "search_page",
-    "template": "https://www.jcpenney.com/s?searchTerm={q}",
-    "query": "Timex MK1 Automatic",
-    "match": "MK1.*Automatic|Automatic.*MK1",
-    "retailer": "JCPenney"
-   },
-   {
-    "type": "search_page",
-    "template": "https://www.kohls.com/search.jsp?search={q}",
-    "query": "Timex MK1 Automatic",
-    "match": "MK1.*Automatic|Automatic.*MK1",
-    "retailer": "Kohl's"
-   },
-   {
-    "type": "search_page",
-    "template": "https://www.jomashop.com/catalogsearch/result/?q={q}",
-    "query": "Timex MK1 Automatic",
-    "match": "MK1.*Automatic|Automatic.*MK1",
-    "retailer": "Jomashop"
    }
   ]
  },
@@ -125,41 +90,6 @@
     "query": "Marlin Draper",
     "retailer": "Teddy Baldassarre",
     "match": "Draper"
-   },
-   {
-    "type": "search_page",
-    "template": "https://www.macys.com/shop/featured/{q}",
-    "query": "Marlin Draper",
-    "match": "Draper",
-    "retailer": "Macy's"
-   },
-   {
-    "type": "search_page",
-    "template": "https://www.belk.com/search/?q={q}",
-    "query": "Marlin Draper",
-    "match": "Draper",
-    "retailer": "Belk"
-   },
-   {
-    "type": "search_page",
-    "template": "https://www.jcpenney.com/s?searchTerm={q}",
-    "query": "Marlin Draper",
-    "match": "Draper",
-    "retailer": "JCPenney"
-   },
-   {
-    "type": "search_page",
-    "template": "https://www.kohls.com/search.jsp?search={q}",
-    "query": "Marlin Draper",
-    "match": "Draper",
-    "retailer": "Kohl's"
-   },
-   {
-    "type": "search_page",
-    "template": "https://www.jomashop.com/catalogsearch/result/?q={q}",
-    "query": "Marlin Draper",
-    "match": "Draper",
-    "retailer": "Jomashop"
    }
   ]
  },
@@ -180,41 +110,6 @@
     "query": "Timex Automatic E Line 38mm",
     "retailer": "Teddy Baldassarre",
     "match": "E[- ]?Line.*38\\s?mm|38\\s?mm.*E[- ]?Line"
-   },
-   {
-    "type": "search_page",
-    "template": "https://www.macys.com/shop/featured/{q}",
-    "query": "Timex Automatic E Line 38mm",
-    "match": "E[- ]?Line.*38\\s?mm|38\\s?mm.*E[- ]?Line",
-    "retailer": "Macy's"
-   },
-   {
-    "type": "search_page",
-    "template": "https://www.belk.com/search/?q={q}",
-    "query": "Timex Automatic E Line 38mm",
-    "match": "E[- ]?Line.*38\\s?mm|38\\s?mm.*E[- ]?Line",
-    "retailer": "Belk"
-   },
-   {
-    "type": "search_page",
-    "template": "https://www.jcpenney.com/s?searchTerm={q}",
-    "query": "Timex Automatic E Line 38mm",
-    "match": "E[- ]?Line.*38\\s?mm|38\\s?mm.*E[- ]?Line",
-    "retailer": "JCPenney"
-   },
-   {
-    "type": "search_page",
-    "template": "https://www.kohls.com/search.jsp?search={q}",
-    "query": "Timex Automatic E Line 38mm",
-    "match": "E[- ]?Line.*38\\s?mm|38\\s?mm.*E[- ]?Line",
-    "retailer": "Kohl's"
-   },
-   {
-    "type": "search_page",
-    "template": "https://www.jomashop.com/catalogsearch/result/?q={q}",
-    "query": "Timex Automatic E Line 38mm",
-    "match": "E[- ]?Line.*38\\s?mm|38\\s?mm.*E[- ]?Line",
-    "retailer": "Jomashop"
    }
   ]
  },
