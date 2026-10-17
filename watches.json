@@ -43,6 +43,11 @@
     "query": "TW2R47900",
     "match": "TW2R47900",
     "retailer": "Kohl's"
+   },
+   {
+    "type": "exa",
+    "query": "Marlin 1965 Reissue Hand-Wound TW2R47900 price buy",
+    "match": "TW2R47900"
    }
   ]
  },
@@ -150,6 +155,11 @@
     "query": "F-B100W-1B",
     "match": "F[- ]?B100W[- ]?1B",
     "retailer": "Kohl's"
+   },
+   {
+    "type": "exa",
+    "query": "Casio F-B100W-1B F-B100W-1B price buy",
+    "match": "F[- ]?B100W[- ]?1B"
    }
   ]
  },
@@ -197,6 +207,11 @@
     "query": "F-B100W-1A",
     "match": "F[- ]?B100W[- ]?1A",
     "retailer": "Kohl's"
+   },
+   {
+    "type": "exa",
+    "query": "Casio F-B100W-1A F-B100W-1A price buy",
+    "match": "F[- ]?B100W[- ]?1A"
    }
   ]
  },
@@ -244,6 +259,11 @@
     "query": "EFK-110D-1A",
     "match": "EFK[- ]?110D[- ]?1A",
     "retailer": "Kohl's"
+   },
+   {
+    "type": "exa",
+    "query": "Edifice EFK110D-1A EFK-110D-1A price buy",
+    "match": "EFK[- ]?110D[- ]?1A"
    }
   ]
  },
@@ -291,6 +311,11 @@
     "query": "EFK-110D-2A",
     "match": "EFK[- ]?110D[- ]?2A",
     "retailer": "Kohl's"
+   },
+   {
+    "type": "exa",
+    "query": "Edifice EFK110D-2A EFK-110D-2A price buy",
+    "match": "EFK[- ]?110D[- ]?2A"
    }
   ]
  },
@@ -343,6 +368,11 @@
     "query": "NJ0151-53M",
     "match": "NJ0151[- ]?53M",
     "retailer": "Kohl's"
+   },
+   {
+    "type": "exa",
+    "query": "TSUYOSA NJ015 Sunray Sky Blue NJ0151-53M price buy",
+    "match": "NJ0151[- ]?53M"
    }
   ]
  },
@@ -390,6 +420,11 @@
     "query": "RA-AG0002S30B",
     "match": "RA[- ]?AG0002S30B",
     "retailer": "Kohl's"
+   },
+   {
+    "type": "exa",
+    "query": "Orient Bambino Open Heart RA-AG0002S30B price buy",
+    "match": "RA[- ]?AG0002S30B"
    }
   ]
  },
@@ -437,6 +472,11 @@
     "query": "SRPK89",
     "match": "SRPK89",
     "retailer": "Kohl's"
+   },
+   {
+    "type": "exa",
+    "query": "Seiko 5 Sports SRPK89 SRPK89 price buy",
+    "match": "SRPK89"
    }
   ]
  },
@@ -482,6 +522,11 @@
     "query": "SRPL55",
     "match": "SRPL55",
     "retailer": "Kohl's"
+   },
+   {
+    "type": "exa",
+    "query": "Seiko 5 Sports SRPL55 SRPL55 price buy",
+    "match": "SRPL55"
    }
   ]
  },
@@ -529,6 +574,11 @@
     "query": "SRPK87",
     "match": "SRPK87",
     "retailer": "Kohl's"
+   },
+   {
+    "type": "exa",
+    "query": "Seiko 5 Sports SRPK87 SRPK87 price buy",
+    "match": "SRPK87"
    }
   ]
  },
@@ -576,6 +626,11 @@
     "query": "SRPK91",
     "match": "SRPK91",
     "retailer": "Kohl's"
+   },
+   {
+    "type": "exa",
+    "query": "Seiko 5 Sports SRPK91 SRPK91 price buy",
+    "match": "SRPK91"
    }
   ]
  },
@@ -623,6 +678,11 @@
     "query": "SRPL57",
     "match": "SRPL57",
     "retailer": "Kohl's"
+   },
+   {
+    "type": "exa",
+    "query": "Seiko 5 Sports SRPL57 SRPL57 price buy",
+    "match": "SRPL57"
    }
   ]
  },
@@ -670,6 +730,11 @@
     "query": "SRPL59",
     "match": "SRPL59",
     "retailer": "Kohl's"
+   },
+   {
+    "type": "exa",
+    "query": "Seiko 5 Sports SRPL59 SRPL59 price buy",
+    "match": "SRPL59"
    }
   ]
  }

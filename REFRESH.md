@@ -11,3 +11,8 @@ Each run:
 5. Build `prices.json` (fields: id, watch, ref, retailer, today, past_low, regular, off_regular, status, buy_url, checked, note), upload it to the dashboard with the Artifact tool (`asset: true`), then update `datasets/prices` with ArtifactData: new `source.url` and `updated`.
 6. Commit and push price_log.csv on branch claude/adoring-knuth-kg95ry.
 7. Only if a watch has status `best` and is not `baseline`, send a PushNotification naming the watch, price, past low and buy link. Otherwise stay silent.
+
+## Optional services (set as GitHub repository secrets)
+- `FIRECRAWL_API_KEY`: used only when a page blocks both the plain request and the headless browser.
+- `EXA_API_KEY`: adds an Exa web search per watch (authorized retailer domains only). A result counts only if the model number is in its title or address and the price is in range.
+Without these secrets the checker skips both and behaves as before.

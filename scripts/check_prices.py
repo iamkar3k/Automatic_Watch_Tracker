@@ -28,6 +28,38 @@ def get(url):
         raise
 
 
+def http_json(url, body, headers):
+    req = urllib.request.Request(url, data=json.dumps(body).encode(), method="POST",
+                                 headers={"Content-Type": "application/json", "User-Agent": UA, **headers})
+    with urllib.request.urlopen(req, timeout=60) as r:
+        return json.loads(r.read().decode("utf-8", "replace"))
+
+
+def get_firecrawl(url):
+    key = os.environ.get("FIRECRAWL_API_KEY")
+    if not key:
+        raise OSError("blocked, and FIRECRAWL_API_KEY is not set")
+    res = http_json("https://api.firecrawl.dev/v1/scrape", {"url": url, "formats": ["html"]},
+                    {"Authorization": f"Bearer {key}"})
+    html = (res.get("data") or {}).get("html")
+    if not html:
+        raise OSError("firecrawl returned no page")
+    return html
+
+
+def get_html(url):
+    """Plain request, then headless browser (inside get), then Firecrawl for sites that still block us."""
+    try:
+        return get(url)
+    except Exception as first:
+        if os.environ.get("FIRECRAWL_API_KEY"):
+            try:
+                return get_firecrawl(url)
+            except Exception as e:
+                raise OSError(f"{first}; firecrawl: {e}") from e
+        raise
+
+
 _BROWSER = {}
 
 
@@ -121,7 +153,7 @@ def from_search_page(src):
     """
     from urllib.parse import quote_plus
     url = src["template"].format(q=quote_plus(src["query"]))
-    html = get(url)
+    html = get_html(url)
     lo, hi = src["bounds"]
     pat = re.compile(src["match"], re.I)
     best = None
@@ -134,8 +166,40 @@ def from_search_page(src):
     return (best[0], best[1], url, True) if best else None
 
 
+EXA_RETAILERS = {"casio.com": "Casio USA", "macys.com": "Macy's", "belk.com": "Belk", "jcpenney.com": "JCPenney",
+                 "kohls.com": "Kohl's", "teddybaldassarre.com": "Teddy Baldassarre", "citizenwatch.com": "Citizen US",
+                 "orientwatchusa.com": "Orient Watch USA", "seikousa.com": "Seiko USA", "timex.com": "Timex.com"}
+
+
+def from_exa(src):
+    """Exa web search limited to authorized retailers. The model must appear in the result's title or
+    address, and the price must be in range, so a loosely related page cannot set the price."""
+    key = os.environ.get("EXA_API_KEY")
+    if not key:
+        return None
+    lo, hi = src["bounds"]
+    res = http_json("https://api.exa.ai/search", {
+        "query": src["query"], "numResults": 10, "includeDomains": list(EXA_RETAILERS),
+        "contents": {"text": {"maxCharacters": 5000}}}, {"x-api-key": key})
+    pat = re.compile(src["match"], re.I)
+    best = None
+    for r in res.get("results", []):
+        host = urlparse(r.get("url", "")).netloc.removeprefix("www.")
+        retailer = next((n for d, n in EXA_RETAILERS.items() if host.endswith(d)), None)
+        if not retailer or not pat.search((r.get("title") or "") + " " + r.get("url", "")):
+            continue
+        text = r.get("text") or ""
+        m = pat.search(text)
+        window = text[max(0, m.start() - 200): m.end() + 900] if m else text[:1500]
+        prices = [num(x) for x in re.findall(r"\$\s?(\d{1,4}(?:,\d{3})*(?:\.\d{2})?)", window)]
+        prices = [p for p in prices if p and lo <= p <= hi]
+        if prices and (best is None or min(prices) < best[0]):
+            best = (min(prices), max(prices), r["url"], True, retailer)
+    return best
+
+
 def from_page(src):
-    html = get(src["url"])
+    html = get_html(src["url"])
     prices = []
     for blob in re.findall(r'<script[^>]+ld\+json[^>]*>(.*?)</script>', html, re.S | re.I):
         try:
@@ -168,19 +232,21 @@ def walk(node, acc):
 
 PARSERS = {"shopify_product": from_shopify_product,
            "shopify_collection": from_shopify_collection, "shopify_search": from_shopify_search,
-           "search_page": from_search_page, "page": from_page}
+           "search_page": from_search_page, "exa": from_exa, "page": from_page}
 
 
 def fetch(w, bounds):
     """Check every source; return (offers, errors). Each offer is (price, regular, retailer, url, in_stock)."""
     offers, errors = [], []
     for src in w["sources"]:
-        where = urlparse(src.get("url") or src.get("base") or src["template"]).netloc.removeprefix("www.")
+        where = urlparse(src.get("url") or src.get("base") or src.get("template") or "https://api.exa.ai").netloc.removeprefix("www.")
         before = len(errors)
+        if src["type"] == "exa" and not os.environ.get("EXA_API_KEY"):
+            continue
         try:
             res = PARSERS[src["type"]](dict(src, bounds=bounds))
             if res:
-                offers.append((res[0], res[1], src.get("retailer", w["retailer"]), res[2], res[3]))
+                offers.append((res[0], res[1], res[4] if len(res) > 4 else src.get("retailer", w["retailer"]), res[2], res[3]))
             else:
                 errors.append(f"no price at {where}")
         except Exception as e:  # network error, 403, bad JSON
