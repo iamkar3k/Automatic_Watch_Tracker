@@ -231,7 +231,7 @@
    "checked": "2026-10-17T01:00:00Z",
    "stale": true,
    "in_stock": true,
-   "note": "casio.com: HTTP 403; no price at teddybaldassarre.com; macys.com: HTTP 403; belk.com: HTTP 403; jcpenney.com: Page.goto: net::ERR_HTTP2_PROTOCOL_ERROR at https://www.jcpe; kohls.com: HTTP 403",
+   "note": "",
    "offers": [],
    "history": [
     [
@@ -254,7 +254,7 @@
    "checked": "2026-10-17T01:00:00Z",
    "stale": true,
    "in_stock": true,
-   "note": "casio.com: HTTP 403; no price at teddybaldassarre.com; macys.com: HTTP 403; belk.com: HTTP 403; jcpenney.com: Page.goto: net::ERR_HTTP2_PROTOCOL_ERROR at https://www.jcpe; kohls.com: HTTP 403",
+   "note": "",
    "offers": [],
    "history": [
     [
@@ -277,7 +277,7 @@
    "checked": "2026-10-17T01:00:00Z",
    "stale": true,
    "in_stock": true,
-   "note": "casio.com: HTTP 403; no price at teddybaldassarre.com; macys.com: HTTP 403; belk.com: HTTP 403; jcpenney.com: Page.goto: net::ERR_HTTP2_PROTOCOL_ERROR at https://www.jcpe; kohls.com: HTTP 403",
+   "note": "",
    "offers": [],
    "history": [
     [
@@ -300,7 +300,7 @@
    "checked": "2026-10-17T01:00:00Z",
    "stale": true,
    "in_stock": true,
-   "note": "casio.com: HTTP 403; no price at teddybaldassarre.com; macys.com: HTTP 403; belk.com: HTTP 403; jcpenney.com: Page.goto: net::ERR_HTTP2_PROTOCOL_ERROR at https://www.jcpe; kohls.com: HTTP 403",
+   "note": "",
    "offers": [],
    "history": [
     [
@@ -419,7 +419,7 @@
   },
   {
    "id": "snxs",
-   "watch": "Seiko 5 Sports SNXS",
+   "watch": "Seiko 5 Sports SRPK89",
    "ref": "SRPK89",
    "retailer": "Seiko USA",
    "today": 415.0,
@@ -463,6 +463,121 @@
     ],
     [
      "2026-10-17T15:01:11Z",
+     415.0
+    ]
+   ]
+  },
+  {
+   "id": "srpl55",
+   "watch": "Seiko 5 Sports SRPL55",
+   "ref": "SRPL55",
+   "retailer": "Seiko USA",
+   "today": 415.0,
+   "past_low": 415.0,
+   "regular": 415.0,
+   "off_regular": 0.0,
+   "status": "at_low",
+   "buy_url": "https://seikousa.com/products/srpl55",
+   "checked": "2026-10-17T01:00:00Z",
+   "stale": true,
+   "in_stock": true,
+   "note": "",
+   "offers": [],
+   "history": [
+    [
+     "2026-10-17T01:00:00Z",
+     415.0
+    ]
+   ]
+  },
+  {
+   "id": "srpk87",
+   "watch": "Seiko 5 Sports SRPK87",
+   "ref": "SRPK87",
+   "retailer": "Seiko USA",
+   "today": 415.0,
+   "past_low": 415.0,
+   "regular": 415.0,
+   "off_regular": 0.0,
+   "status": "at_low",
+   "buy_url": "https://seikousa.com/products/srpk87",
+   "checked": "2026-10-17T01:00:00Z",
+   "stale": true,
+   "in_stock": true,
+   "note": "",
+   "offers": [],
+   "history": [
+    [
+     "2026-10-17T01:00:00Z",
+     415.0
+    ]
+   ]
+  },
+  {
+   "id": "srpk91",
+   "watch": "Seiko 5 Sports SRPK91",
+   "ref": "SRPK91",
+   "retailer": "Seiko USA",
+   "today": 415.0,
+   "past_low": 415.0,
+   "regular": 415.0,
+   "off_regular": 0.0,
+   "status": "at_low",
+   "buy_url": "https://seikousa.com/products/srpk91",
+   "checked": "2026-10-17T01:00:00Z",
+   "stale": true,
+   "in_stock": true,
+   "note": "",
+   "offers": [],
+   "history": [
+    [
+     "2026-10-17T01:00:00Z",
+     415.0
+    ]
+   ]
+  },
+  {
+   "id": "srpl57",
+   "watch": "Seiko 5 Sports SRPL57",
+   "ref": "SRPL57",
+   "retailer": "Seiko USA",
+   "today": 415.0,
+   "past_low": 415.0,
+   "regular": 415.0,
+   "off_regular": 0.0,
+   "status": "at_low",
+   "buy_url": "https://seikousa.com/products/srpl57",
+   "checked": "2026-10-17T01:00:00Z",
+   "stale": true,
+   "in_stock": true,
+   "note": "",
+   "offers": [],
+   "history": [
+    [
+     "2026-10-17T01:00:00Z",
+     415.0
+    ]
+   ]
+  },
+  {
+   "id": "srpl59",
+   "watch": "Seiko 5 Sports SRPL59",
+   "ref": "SRPL59",
+   "retailer": "Seiko USA",
+   "today": 415.0,
+   "past_low": 415.0,
+   "regular": 415.0,
+   "off_regular": 0.0,
+   "status": "at_low",
+   "buy_url": "https://seikousa.com/products/srpl59",
+   "checked": "2026-10-17T01:00:00Z",
+   "stale": true,
+   "in_stock": true,
+   "note": "",
+   "offers": [],
+   "history": [
+    [
+     "2026-10-17T01:00:00Z",
      415.0
     ]
    ]
