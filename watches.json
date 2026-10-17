@@ -395,7 +395,7 @@
  },
  {
   "id": "snxs",
-  "watch": "Seiko 5 Sports SNXS",
+  "watch": "Seiko 5 Sports SRPK89",
   "ref": "SRPK89",
   "retailer": "Seiko USA",
   "sources": [
@@ -481,6 +481,194 @@
     "template": "https://www.kohls.com/search.jsp?search={q}",
     "query": "SRPL55",
     "match": "SRPL55",
+    "retailer": "Kohl's"
+   }
+  ]
+ },
+ {
+  "id": "srpk87",
+  "watch": "Seiko 5 Sports SRPK87",
+  "ref": "SRPK87",
+  "retailer": "Seiko USA",
+  "sources": [
+   {
+    "type": "shopify_product",
+    "url": "https://seikousa.com/products/srpk87"
+   },
+   {
+    "type": "shopify_search",
+    "base": "https://teddybaldassarre.com",
+    "query": "SRPK87",
+    "retailer": "Teddy Baldassarre",
+    "match": "SRPK87"
+   },
+   {
+    "type": "search_page",
+    "template": "https://www.macys.com/shop/featured/{q}",
+    "query": "SRPK87",
+    "match": "SRPK87",
+    "retailer": "Macy's"
+   },
+   {
+    "type": "search_page",
+    "template": "https://www.belk.com/search/?q={q}",
+    "query": "SRPK87",
+    "match": "SRPK87",
+    "retailer": "Belk"
+   },
+   {
+    "type": "search_page",
+    "template": "https://www.jcpenney.com/s?searchTerm={q}",
+    "query": "SRPK87",
+    "match": "SRPK87",
+    "retailer": "JCPenney"
+   },
+   {
+    "type": "search_page",
+    "template": "https://www.kohls.com/search.jsp?search={q}",
+    "query": "SRPK87",
+    "match": "SRPK87",
+    "retailer": "Kohl's"
+   }
+  ]
+ },
+ {
+  "id": "srpk91",
+  "watch": "Seiko 5 Sports SRPK91",
+  "ref": "SRPK91",
+  "retailer": "Seiko USA",
+  "sources": [
+   {
+    "type": "shopify_product",
+    "url": "https://seikousa.com/products/srpk91"
+   },
+   {
+    "type": "shopify_search",
+    "base": "https://teddybaldassarre.com",
+    "query": "SRPK91",
+    "retailer": "Teddy Baldassarre",
+    "match": "SRPK91"
+   },
+   {
+    "type": "search_page",
+    "template": "https://www.macys.com/shop/featured/{q}",
+    "query": "SRPK91",
+    "match": "SRPK91",
+    "retailer": "Macy's"
+   },
+   {
+    "type": "search_page",
+    "template": "https://www.belk.com/search/?q={q}",
+    "query": "SRPK91",
+    "match": "SRPK91",
+    "retailer": "Belk"
+   },
+   {
+    "type": "search_page",
+    "template": "https://www.jcpenney.com/s?searchTerm={q}",
+    "query": "SRPK91",
+    "match": "SRPK91",
+    "retailer": "JCPenney"
+   },
+   {
+    "type": "search_page",
+    "template": "https://www.kohls.com/search.jsp?search={q}",
+    "query": "SRPK91",
+    "match": "SRPK91",
+    "retailer": "Kohl's"
+   }
+  ]
+ },
+ {
+  "id": "srpl57",
+  "watch": "Seiko 5 Sports SRPL57",
+  "ref": "SRPL57",
+  "retailer": "Seiko USA",
+  "sources": [
+   {
+    "type": "shopify_product",
+    "url": "https://seikousa.com/products/srpl57"
+   },
+   {
+    "type": "shopify_search",
+    "base": "https://teddybaldassarre.com",
+    "query": "SRPL57",
+    "retailer": "Teddy Baldassarre",
+    "match": "SRPL57"
+   },
+   {
+    "type": "search_page",
+    "template": "https://www.macys.com/shop/featured/{q}",
+    "query": "SRPL57",
+    "match": "SRPL57",
+    "retailer": "Macy's"
+   },
+   {
+    "type": "search_page",
+    "template": "https://www.belk.com/search/?q={q}",
+    "query": "SRPL57",
+    "match": "SRPL57",
+    "retailer": "Belk"
+   },
+   {
+    "type": "search_page",
+    "template": "https://www.jcpenney.com/s?searchTerm={q}",
+    "query": "SRPL57",
+    "match": "SRPL57",
+    "retailer": "JCPenney"
+   },
+   {
+    "type": "search_page",
+    "template": "https://www.kohls.com/search.jsp?search={q}",
+    "query": "SRPL57",
+    "match": "SRPL57",
+    "retailer": "Kohl's"
+   }
+  ]
+ },
+ {
+  "id": "srpl59",
+  "watch": "Seiko 5 Sports SRPL59",
+  "ref": "SRPL59",
+  "retailer": "Seiko USA",
+  "sources": [
+   {
+    "type": "shopify_product",
+    "url": "https://seikousa.com/products/srpl59"
+   },
+   {
+    "type": "shopify_search",
+    "base": "https://teddybaldassarre.com",
+    "query": "SRPL59",
+    "retailer": "Teddy Baldassarre",
+    "match": "SRPL59"
+   },
+   {
+    "type": "search_page",
+    "template": "https://www.macys.com/shop/featured/{q}",
+    "query": "SRPL59",
+    "match": "SRPL59",
+    "retailer": "Macy's"
+   },
+   {
+    "type": "search_page",
+    "template": "https://www.belk.com/search/?q={q}",
+    "query": "SRPL59",
+    "match": "SRPL59",
+    "retailer": "Belk"
+   },
+   {
+    "type": "search_page",
+    "template": "https://www.jcpenney.com/s?searchTerm={q}",
+    "query": "SRPL59",
+    "match": "SRPL59",
+    "retailer": "JCPenney"
+   },
+   {
+    "type": "search_page",
+    "template": "https://www.kohls.com/search.jsp?search={q}",
+    "query": "SRPL59",
+    "match": "SRPL59",
     "retailer": "Kohl's"
    }
   ]
