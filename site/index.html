@@ -59,7 +59,7 @@ fetch("prices.json",{cache:"no-store"}).then(r=>r.json()).then(d=>{
   const atLow=d.watches.filter(w=>w.status!=="above").length;
   document.getElementById("sub").textContent=`${atLow} of ${d.watches.length} watches are at their lowest price seen. Updated ${new Date(d.updated).toLocaleString("en-US",{timeZone:"America/New_York",dateStyle:"medium",timeStyle:"short"})} ET.`;
   d.watches.forEach(w=>{
-    const best=w.status!=="above";
+    const best=w.status!=="above";const buy=best&&w.in_stock!==false;
     const c=el("div","card"+(best?" best":""));
     const top=el("div","top"),L=el("div");
     L.append(el("h2",null,w.watch),el("span","ref",`${w.ref} · ${w.retailer}`));
@@ -71,8 +71,8 @@ fetch("prices.json",{cache:"no-store"}).then(r=>r.json()).then(d=>{
     if(w.offers&&w.offers.length>1){const o=el("div","offers");w.offers.forEach(f=>{const a=el("a",null,`${f.retailer} ${usd(f.price)}`);a.href=f.url;a.target="_blank";a.rel="noopener noreferrer";o.append(a)});c.append(o)}
     const sp=spark(w.history);if(sp)c.append(sp);
     if(w.stale)c.append(el("p","note warn","Live check failed; showing the last known price. "+w.note));
-    if(best){const a=el("a","buy","Buy at "+w.retailer);a.href=w.buy_url;a.target="_blank";a.rel="noopener noreferrer";c.append(a)}
-    else c.append(el("span","wait","Wait for a lower price"));
+    if(buy){const a=el("a","buy","Buy at "+w.retailer);a.href=w.buy_url;a.target="_blank";a.rel="noopener noreferrer";c.append(a)}
+    else c.append(el("span","wait",w.in_stock===false?"Out of stock":"Wait for a lower price"));
     g.append(c);
   });
 }).catch(()=>{document.getElementById("sub").textContent="Could not load prices.json."});
