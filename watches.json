@@ -43,13 +43,6 @@
     "query": "TW2R47900",
     "match": "TW2R47900",
     "retailer": "Kohl's"
-   },
-   {
-    "type": "search_page",
-    "template": "https://www.jomashop.com/catalogsearch/result/?q={q}",
-    "query": "TW2R47900",
-    "match": "TW2R47900",
-    "retailer": "Jomashop"
    }
   ]
  },
@@ -157,13 +150,6 @@
     "query": "F-B100W-1B",
     "match": "F[- ]?B100W[- ]?1B",
     "retailer": "Kohl's"
-   },
-   {
-    "type": "search_page",
-    "template": "https://www.jomashop.com/catalogsearch/result/?q={q}",
-    "query": "F-B100W-1B",
-    "match": "F[- ]?B100W[- ]?1B",
-    "retailer": "Jomashop"
    }
   ]
  },
@@ -211,13 +197,6 @@
     "query": "F-B100W-1A",
     "match": "F[- ]?B100W[- ]?1A",
     "retailer": "Kohl's"
-   },
-   {
-    "type": "search_page",
-    "template": "https://www.jomashop.com/catalogsearch/result/?q={q}",
-    "query": "F-B100W-1A",
-    "match": "F[- ]?B100W[- ]?1A",
-    "retailer": "Jomashop"
    }
   ]
  },
@@ -265,13 +244,6 @@
     "query": "EFK-110D-1A",
     "match": "EFK[- ]?110D[- ]?1A",
     "retailer": "Kohl's"
-   },
-   {
-    "type": "search_page",
-    "template": "https://www.jomashop.com/catalogsearch/result/?q={q}",
-    "query": "EFK-110D-1A",
-    "match": "EFK[- ]?110D[- ]?1A",
-    "retailer": "Jomashop"
    }
   ]
  },
@@ -319,13 +291,6 @@
     "query": "EFK-110D-2A",
     "match": "EFK[- ]?110D[- ]?2A",
     "retailer": "Kohl's"
-   },
-   {
-    "type": "search_page",
-    "template": "https://www.jomashop.com/catalogsearch/result/?q={q}",
-    "query": "EFK-110D-2A",
-    "match": "EFK[- ]?110D[- ]?2A",
-    "retailer": "Jomashop"
    }
   ]
  },
@@ -378,13 +343,6 @@
     "query": "NJ0151-53M",
     "match": "NJ0151[- ]?53M",
     "retailer": "Kohl's"
-   },
-   {
-    "type": "search_page",
-    "template": "https://www.jomashop.com/catalogsearch/result/?q={q}",
-    "query": "NJ0151-53M",
-    "match": "NJ0151[- ]?53M",
-    "retailer": "Jomashop"
    }
   ]
  },
@@ -432,13 +390,6 @@
     "query": "RA-AG0002S30B",
     "match": "RA[- ]?AG0002S30B",
     "retailer": "Kohl's"
-   },
-   {
-    "type": "search_page",
-    "template": "https://www.jomashop.com/catalogsearch/result/?q={q}",
-    "query": "RA-AG0002S30B",
-    "match": "RA[- ]?AG0002S30B",
-    "retailer": "Jomashop"
    }
   ]
  },
@@ -486,13 +437,6 @@
     "query": "SRPK89",
     "match": "SRPK89",
     "retailer": "Kohl's"
-   },
-   {
-    "type": "search_page",
-    "template": "https://www.jomashop.com/catalogsearch/result/?q={q}",
-    "query": "SRPK89",
-    "match": "SRPK89",
-    "retailer": "Jomashop"
    }
   ]
  }
