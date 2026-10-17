@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-17T01:22:53Z",
+ "updated": "2026-10-17T01:23:58Z",
  "watches": [
   {
    "id": "marlin1965",
@@ -14,7 +14,8 @@
    "buy_url": "https://timex.com/products/marlin-1965-reissue-hand-wound-34mm-leather-strap-watch-tw2r47900",
    "checked": "2026-10-17T01:00:00Z",
    "stale": true,
-   "note": "https://timex.com/products/marlin-1965-reissue-hand-wound-34mm-leather-strap-watch-tw2r47900: URLError <urlopen error Tunnel connection failed: 403 Forbidden>",
+   "note": "https://timex.com/products/marlin-1965-reissue-hand-wound-34mm-leather-strap-watch-tw2r47900: URLError <urlopen error Tunnel connection failed: 403 Forbidden>; https://teddybaldassarre.com: URLError <urlopen error Tunnel connection failed: 403 Forbidden>",
+   "offers": [],
    "history": [
     [
      "2026-10-17T01:00:00Z",
@@ -27,23 +28,20 @@
    "watch": "MK1 Automatic",
    "ref": "TW2Y71800",
    "retailer": "Timex.com",
-   "today": 309.0,
+   "today": 299.0,
    "past_low": 299.0,
    "regular": 309.0,
-   "off_regular": 0.0,
-   "status": "above",
+   "off_regular": 3.2,
+   "status": "at_low",
    "buy_url": "https://timex.com/collections/mk1-watches",
    "checked": "2026-10-17T01:00:00Z",
    "stale": true,
-   "note": "https://timex.com/collections/mk1-watches: URLError <urlopen error Tunnel connection failed: 403 Forbidden>",
+   "note": "https://timex.com/collections/mk1-watches: URLError <urlopen error Tunnel connection failed: 403 Forbidden>; https://teddybaldassarre.com: URLError <urlopen error Tunnel connection failed: 403 Forbidden>",
+   "offers": [],
    "history": [
     [
      "2026-10-17T01:00:00Z",
      299.0
-    ],
-    [
-     "2026-10-17T01:00:00Z",
-     309.0
     ]
    ]
   },
@@ -52,23 +50,20 @@
    "watch": "Marlin Draper Automatic",
    "ref": "37mm",
    "retailer": "Timex.com",
-   "today": 279.0,
+   "today": 269.0,
    "past_low": 269.0,
    "regular": 309.0,
-   "off_regular": 9.7,
-   "status": "above",
+   "off_regular": 12.9,
+   "status": "at_low",
    "buy_url": "https://timex.com/collections/automatic-watches",
    "checked": "2026-10-17T01:00:00Z",
    "stale": true,
-   "note": "https://timex.com/collections/automatic-watches: URLError <urlopen error Tunnel connection failed: 403 Forbidden>",
+   "note": "https://timex.com/collections/automatic-watches: URLError <urlopen error Tunnel connection failed: 403 Forbidden>; https://teddybaldassarre.com: URLError <urlopen error Tunnel connection failed: 403 Forbidden>",
+   "offers": [],
    "history": [
     [
      "2026-10-17T01:00:00Z",
      269.0
-    ],
-    [
-     "2026-10-17T01:00:00Z",
-     279.0
     ]
    ]
   },
@@ -85,7 +80,8 @@
    "buy_url": "https://timex.com/collections/timex-e-line",
    "checked": "2026-10-17T01:00:00Z",
    "stale": true,
-   "note": "https://timex.com/collections/timex-e-line: URLError <urlopen error Tunnel connection failed: 403 Forbidden>",
+   "note": "https://timex.com/collections/timex-e-line: URLError <urlopen error Tunnel connection failed: 403 Forbidden>; https://teddybaldassarre.com: URLError <urlopen error Tunnel connection failed: 403 Forbidden>",
+   "offers": [],
    "history": [
     [
      "2026-10-17T01:00:00Z",
@@ -106,7 +102,8 @@
    "buy_url": "https://www.casio.com/us/",
    "checked": "2026-10-17T01:00:00Z",
    "stale": true,
-   "note": "https://www.casio.com/us/watches/casio/product.F-B100W-1B/: URLError <urlopen error Tunnel connection failed: 403 Forbidden>",
+   "note": "https://www.casio.com/us/watches/casio/product.F-B100W-1B/: URLError <urlopen error Tunnel connection failed: 403 Forbidden>; https://teddybaldassarre.com: URLError <urlopen error Tunnel connection failed: 403 Forbidden>",
+   "offers": [],
    "history": [
     [
      "2026-10-17T01:00:00Z",
@@ -127,7 +124,8 @@
    "buy_url": "https://www.casio.com/us/",
    "checked": "2026-10-17T01:00:00Z",
    "stale": true,
-   "note": "https://www.casio.com/us/watches/casio/product.F-B100W-1A/: URLError <urlopen error Tunnel connection failed: 403 Forbidden>",
+   "note": "https://www.casio.com/us/watches/casio/product.F-B100W-1A/: URLError <urlopen error Tunnel connection failed: 403 Forbidden>; https://teddybaldassarre.com: URLError <urlopen error Tunnel connection failed: 403 Forbidden>",
+   "offers": [],
    "history": [
     [
      "2026-10-17T01:00:00Z",
@@ -148,7 +146,8 @@
    "buy_url": "https://www.casio.com/us/",
    "checked": "2026-10-17T01:00:00Z",
    "stale": true,
-   "note": "https://www.casio.com/us/watches/edifice/product.EFK-110D-1A/: URLError <urlopen error Tunnel connection failed: 403 Forbidden>",
+   "note": "https://www.casio.com/us/watches/edifice/product.EFK-110D-1A/: URLError <urlopen error Tunnel connection failed: 403 Forbidden>; https://teddybaldassarre.com: URLError <urlopen error Tunnel connection failed: 403 Forbidden>",
+   "offers": [],
    "history": [
     [
      "2026-10-17T01:00:00Z",
@@ -169,7 +168,8 @@
    "buy_url": "https://www.casio.com/us/",
    "checked": "2026-10-17T01:00:00Z",
    "stale": true,
-   "note": "https://www.casio.com/us/watches/edifice/product.EFK-110D-2A/: URLError <urlopen error Tunnel connection failed: 403 Forbidden>",
+   "note": "https://www.casio.com/us/watches/edifice/product.EFK-110D-2A/: URLError <urlopen error Tunnel connection failed: 403 Forbidden>; https://teddybaldassarre.com: URLError <urlopen error Tunnel connection failed: 403 Forbidden>",
+   "offers": [],
    "history": [
     [
      "2026-10-17T01:00:00Z",
@@ -181,24 +181,21 @@
    "id": "tsuyosa",
    "watch": "TSUYOSA NJ015 Sunray Sky Blue",
    "ref": "NJ0151-53M",
-   "retailer": "Majesty Jewelers",
-   "today": 355.0,
+   "retailer": "Citizen US",
+   "today": 306.0,
    "past_low": 306.0,
    "regular": 450.0,
-   "off_regular": 21.1,
-   "status": "above",
-   "buy_url": "https://www.majestyjewelers.com/citizen-nj0151-53m",
+   "off_regular": 32.0,
+   "status": "at_low",
+   "buy_url": "https://www.citizenwatch.com/us/en/product/NJ0151-53M",
    "checked": "2026-10-17T01:00:00Z",
    "stale": true,
-   "note": "https://www.citizenwatch.com/us/en/product/NJ0151-53M: URLError <urlopen error Tunnel connection failed: 403 Forbidden>; https://www.majestyjewelers.com/citizen-nj0151-53m: URLError <urlopen error Tunnel connection failed: 403 Forbidden>",
+   "note": "https://www.citizenwatch.com/us/en/product/NJ0151-53M: URLError <urlopen error Tunnel connection failed: 403 Forbidden>; https://www.majestyjewelers.com/citizen-nj0151-53m: URLError <urlopen error Tunnel connection failed: 403 Forbidden>; https://teddybaldassarre.com: URLError <urlopen error Tunnel ",
+   "offers": [],
    "history": [
     [
      "2026-10-17T01:00:00Z",
      306.0
-    ],
-    [
-     "2026-10-17T01:00:00Z",
-     355.0
     ]
    ]
   },
@@ -215,7 +212,8 @@
    "buy_url": "https://orientwatchusa.com/products/ra-ag0002s30b",
    "checked": "2026-10-17T01:00:00Z",
    "stale": true,
-   "note": "https://orientwatchusa.com/products/ra-ag0002s30b: URLError <urlopen error Tunnel connection failed: 403 Forbidden>",
+   "note": "https://orientwatchusa.com/products/ra-ag0002s30b: URLError <urlopen error Tunnel connection failed: 403 Forbidden>; https://teddybaldassarre.com: URLError <urlopen error Tunnel connection failed: 403 Forbidden>",
+   "offers": [],
    "history": [
     [
      "2026-10-17T01:00:00Z",
@@ -236,7 +234,8 @@
    "buy_url": "https://seikousa.com/products/srpk89",
    "checked": "2026-10-17T01:00:00Z",
    "stale": true,
-   "note": "https://seikousa.com/products/srpk89: URLError <urlopen error Tunnel connection failed: 403 Forbidden>",
+   "note": "https://seikousa.com/products/srpk89: URLError <urlopen error Tunnel connection failed: 403 Forbidden>; https://teddybaldassarre.com: URLError <urlopen error Tunnel connection failed: 403 Forbidden>",
+   "offers": [],
    "history": [
     [
      "2026-10-17T01:00:00Z",

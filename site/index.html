@@ -30,6 +30,7 @@ svg{width:100%;height:44px}
 .warn{color:var(--warn)}
 a.buy{align-self:flex-start;padding:7px 14px;border:1px solid var(--ok);color:var(--ok);border-radius:8px;text-decoration:none}
 a.buy:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.offers{display:flex;gap:6px 12px;flex-wrap:wrap;font-size:.8rem}.offers a{color:var(--accent)}
 .wait{color:var(--muted);font-size:.85rem}
 footer{color:var(--muted);font-size:.8rem;margin-top:20px}
 </style>
@@ -67,6 +68,7 @@ fetch("prices.json",{cache:"no-store"}).then(r=>r.json()).then(d=>{
     const r=el("div","row");
     [["Past low",w.past_low],["Regular",w.regular]].forEach(([k,v])=>{const x=el("div");x.append(el("span","k",k),el("span","v",usd(v)));r.append(x)});
     c.append(r);
+    if(w.offers&&w.offers.length>1){const o=el("div","offers");w.offers.forEach(f=>{const a=el("a",null,`${f.retailer} ${usd(f.price)}`);a.href=f.url;a.target="_blank";a.rel="noopener noreferrer";o.append(a)});c.append(o)}
     const sp=spark(w.history);if(sp)c.append(sp);
     if(w.stale)c.append(el("p","note warn","Live check failed; showing the last known price. "+w.note));
     if(best){const a=el("a","buy","Buy at "+w.retailer);a.href=w.buy_url;a.target="_blank";a.rel="noopener noreferrer";c.append(a)}

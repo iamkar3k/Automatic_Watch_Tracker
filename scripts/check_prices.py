@@ -46,7 +46,7 @@ def from_shopify_product(src):
     url = src["url"].split("?")[0].rstrip("/")
     p = json.loads(get(url + ".js"))  # .js prices are in cents
     out = [(price / 100, cmp_ / 100) for price, cmp_ in shopify_variants(p)]
-    return min(out) if out else None
+    return (*min(out), url) if out else None
 
 
 def from_shopify_collection(src):
@@ -56,7 +56,25 @@ def from_shopify_collection(src):
     for p in data.get("products", []):
         if pat.search(p.get("title", "") + " " + p.get("handle", "")):
             out += shopify_variants(p)
-    return min(out) if out else None
+    return (*min(out), src["url"]) if out else None
+
+
+def from_shopify_search(src):
+    """Shopify storefront search; returns the cheapest in-stock match as (price, regular, url)."""
+    from urllib.parse import quote
+    url = (f"{src['base']}/search/suggest.json?q={quote(src['query'])}"
+           "&resources%5Btype%5D=product&resources%5Blimit%5D=10")
+    prods = json.loads(get(url))["resources"]["results"]["products"]
+    pat = re.compile(src["match"], re.I)
+    best = None
+    for p in prods:
+        if p.get("available") is False or not pat.search(p.get("title", "") + " " + p.get("handle", "")):
+            continue
+        price = num(p.get("price"))
+        regular = num(p.get("compare_at_price_max")) or price
+        if price and (best is None or price < best[0]):
+            best = (price, regular, src["base"] + p["url"].split("?")[0])
+    return best
 
 
 def from_page(src):
@@ -73,7 +91,7 @@ def from_page(src):
                     r'itemprop=["\']price["\'][^>]*content=["\']([\d.,]+)'):
             prices += [num(m) for m in re.findall(pat, html, re.I)]
     prices = [p for p in prices if p]
-    return (min(prices), max(prices)) if prices else None
+    return (min(prices), max(prices), src["url"]) if prices else None
 
 
 def walk(node, acc):
@@ -91,20 +109,23 @@ def walk(node, acc):
 
 
 PARSERS = {"shopify_product": from_shopify_product,
-           "shopify_collection": from_shopify_collection, "page": from_page}
+           "shopify_collection": from_shopify_collection, "shopify_search": from_shopify_search,
+           "page": from_page}
 
 
 def fetch(w):
-    errors = []
+    """Check every source; return (offers, errors). Each offer is (price, regular, retailer, url)."""
+    offers, errors = [], []
     for src in w["sources"]:
         try:
             res = PARSERS[src["type"]](src)
             if res:
-                return res[0], res[1], src.get("retailer", w["retailer"]), src["url"], ""
-            errors.append(f"no price found at {src['url']}")
+                offers.append((res[0], res[1], src.get("retailer", w["retailer"]), res[2]))
+            else:
+                errors.append(f"no price at {src['url' if 'url' in src else 'base']}")
         except Exception as e:  # network error, 403, bad JSON
-            errors.append(f"{src['url']}: {type(e).__name__} {e}")
-    return None, None, w["retailer"], w["sources"][0]["url"], "; ".join(errors)[:300]
+            errors.append(f"{src.get('url', src.get('base'))}: {type(e).__name__} {e}")
+    return offers, "; ".join(errors)[:300]
 
 
 def main():
@@ -120,34 +141,47 @@ def main():
     for w in watches:
         prior = [float(r["price"]) for r in rows if r["id"] == w["id"] and r["price"]]
         has_live = any(r["source"] == "live" for r in rows if r["id"] == w["id"])
-        price, regular, retailer, url, err = fetch(w)
-        if price is not None:
+        offers, err = fetch(w)
+        for price, regular, retailer, url in offers:
             rows.append(dict(ts=ts, id=w["id"], price=f"{price:.2f}", regular=f"{regular:.2f}",
                              retailer=retailer, url=url, source="live", note=""))
+        if offers:
+            price, _, retailer, url = min(offers)
             if has_live and price < min(prior):  # first live run only replaces unverified seeds
                 alerts.append(f"- **{w['watch']}**: ${price:.2f} at {retailer} (previous low ${min(prior):.2f}). [Buy]({url})")
         else:
             print(f"FAILED {w['id']}: {err}", file=sys.stderr)
-        summary.append((w, price, regular, retailer, url, err))
+        summary.append((w, offers, err))
     with HIST.open("w", newline="") as f:
         wr = csv.DictWriter(f, FIELDS)
         wr.writeheader()
         wr.writerows(rows)
     out = []
-    for w, price, regular, retailer, url, err in summary:
+    for w, offers, err in summary:
         hist = [r for r in rows if r["id"] == w["id"] and r["price"]]
-        last = hist[-1]
-        today = price if price is not None else float(last["price"])
-        reg = regular if regular is not None else float(last["regular"] or today)
-        earlier = [float(r["price"]) for r in hist if not (price is not None and r is hist[-1])]
-        past_low = min(earlier) if earlier else today
-        status = "new_low" if today < past_low else "at_low" if today == past_low else "above"
-        out.append(dict(id=w["id"], watch=w["watch"], ref=w["ref"], retailer=last["retailer"] if price is None else retailer,
-                        today=today, past_low=min(past_low, today), regular=reg,
-                        off_regular=round(100 * (reg - today) / reg, 1) if reg else 0,
-                        status=status, buy_url=last["url"] if price is None else url,
-                        checked=last["ts"], stale=price is None, note=err if price is None else "",
-                        history=[[r["ts"], float(r["price"])] for r in hist]))
+        if offers:
+            price, regular, retailer, url = min(offers)
+            earlier = [float(r["price"]) for r in hist if r["ts"] != ts]
+            checked = ts
+        else:  # every source failed: show the cheapest price from the latest earlier check
+            latest = [r for r in hist if r["ts"] == hist[-1]["ts"]]
+            low = min(latest, key=lambda r: float(r["price"]))
+            price, regular, retailer, url = float(low["price"]), float(low["regular"] or low["price"]), low["retailer"], low["url"]
+            earlier = [float(r["price"]) for r in hist if r["ts"] != hist[-1]["ts"]]
+            checked = hist[-1]["ts"]
+        past_low = min(earlier) if earlier else price
+        status = "new_low" if price < past_low else "at_low" if price == past_low else "above"
+        by_ts = {}
+        for r in hist:
+            by_ts[r["ts"]] = min(by_ts.get(r["ts"], 1e9), float(r["price"]))
+        out.append(dict(id=w["id"], watch=w["watch"], ref=w["ref"], retailer=retailer,
+                        today=price, past_low=min(past_low, price), regular=regular,
+                        off_regular=round(100 * (regular - price) / regular, 1) if regular else 0,
+                        status=status, buy_url=url, checked=checked, stale=not offers,
+                        note="" if offers else err,
+                        offers=[dict(retailer=r["retailer"], price=float(r["price"]), url=r["url"])
+                                for r in sorted((r for r in hist if r["ts"] == ts), key=lambda r: float(r["price"]))],
+                        history=[[t, p] for t, p in by_ts.items()]))
     (ROOT / "site").mkdir(exist_ok=True)
     (ROOT / "site" / "prices.json").write_text(json.dumps({"updated": ts, "watches": out}, indent=1))
     alert_file = ROOT / "alerts.md"
@@ -155,7 +189,7 @@ def main():
     if alerts:
         alert_file.write_text("New lowest price logged:\n\n" + "\n".join(alerts) + "\n")
     Path(os.environ.get("GITHUB_OUTPUT", os.devnull)).open("a").write("ran=true\n")
-    print(f"Checked {len(summary)} watches, {sum(1 for s in summary if s[1] is None)} failed, {len(alerts)} alerts.")
+    print(f"Checked {len(summary)} watches, {sum(1 for s in summary if not s[1])} fully failed, {len(alerts)} alerts.")
 
 
 if __name__ == "__main__":
