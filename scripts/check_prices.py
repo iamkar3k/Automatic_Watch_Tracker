@@ -1,12 +1,11 @@
 """Check US retailer prices, append to data/history.csv, write site/prices.json.
 
-Runs three times a day (9:00, 13:00, 17:00 America/New_York). Set FORCE=1 to run
-outside those hours. Writes alerts.md when a watch hits a strictly lower price
+Runs once per 9:00, 13:00 and 17:00 America/New_York slot (see due()). Writes alerts.md when a watch hits a strictly lower price
 than anything logged before.
 """
 import csv, json, os, re, sys, urllib.error, urllib.request
 from urllib.parse import urlparse
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 from zoneinfo import ZoneInfo
 
@@ -190,12 +189,28 @@ def fetch(w, bounds):
     return offers, "; ".join(errors)[:300]
 
 
+def due(rows, now):
+    """True if no live check has been logged since the most recent 9:00/13:00/17:00 ET slot.
+
+    GitHub's cron is best effort and often late or skipped, so the workflow runs hourly and this
+    decides whether the current slot still needs its check. A late trigger still runs; a repeat
+    trigger inside the same slot does not.
+    """
+    et = now.astimezone(ZoneInfo("America/New_York"))
+    slots = [et.replace(hour=h, minute=0, second=0, microsecond=0) for h in sorted(RUN_HOURS)]
+    past = [x for x in slots if x <= et]
+    slot = past[-1] if past else slots[-1] - timedelta(days=1)
+    last = max((r["ts"] for r in rows if r["source"] == "live"), default="")
+    return last < slot.astimezone(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+
+
 def main():
     now = datetime.now(timezone.utc)
     rebuild = os.environ.get("REBUILD") == "1"  # regenerate site/prices.json from history without fetching
-    if os.environ.get("FORCE") != "1" and not rebuild and now.astimezone(ZoneInfo("America/New_York")).hour not in RUN_HOURS:
-        print("Outside the 9/13/17 ET run hours; skipping.")
-        Path(os.environ.get("GITHUB_OUTPUT", os.devnull)).open("a").write("ran=false\n")
+    if "--due" in sys.argv:  # used by the workflow before it installs anything
+        is_due = os.environ.get("FORCE") == "1" or due(list(csv.DictReader(HIST.open())), now)
+        print(f"due={is_due}")
+        Path(os.environ.get("GITHUB_OUTPUT", os.devnull)).open("a").write(f"due={str(is_due).lower()}\n")
         return
     watches = json.loads((ROOT / "watches.json").read_text())
     rows = list(csv.DictReader(HIST.open()))
