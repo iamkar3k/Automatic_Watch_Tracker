@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-17T01:34:29Z",
+ "updated": "2026-10-17T01:48:32Z",
  "watches": [
   {
    "id": "marlin1965",
@@ -12,14 +12,16 @@
    "off_regular": 0.0,
    "status": "at_low",
    "buy_url": "https://timex.com/products/marlin-1965-reissue-hand-wound-34mm-leather-strap-watch-tw2r47900",
-   "checked": "2026-10-17T01:34:29Z",
+   "checked": "2026-10-17T01:48:32Z",
    "stale": false,
+   "in_stock": true,
    "note": "",
    "offers": [
     {
      "retailer": "Timex.com",
      "price": 259.0,
-     "url": "https://timex.com/products/marlin-1965-reissue-hand-wound-34mm-leather-strap-watch-tw2r47900"
+     "url": "https://timex.com/products/marlin-1965-reissue-hand-wound-34mm-leather-strap-watch-tw2r47900",
+     "in_stock": true
     }
    ],
    "history": [
@@ -30,6 +32,10 @@
     [
      "2026-10-17T01:34:29Z",
      259.0
+    ],
+    [
+     "2026-10-17T01:48:32Z",
+     259.0
     ]
    ]
   },
@@ -37,21 +43,29 @@
    "id": "mk1",
    "watch": "MK1 Automatic",
    "ref": "TW2Y71800",
-   "retailer": "Timex.com",
-   "today": 309.0,
-   "past_low": 299.0,
-   "regular": 309.0,
-   "off_regular": 0.0,
-   "status": "above",
-   "buy_url": "https://timex.com/collections/mk1-watches",
-   "checked": "2026-10-17T01:34:29Z",
+   "retailer": "Belk",
+   "today": 174.0,
+   "past_low": 174.0,
+   "regular": 200.0,
+   "off_regular": 13.0,
+   "status": "new_low",
+   "buy_url": "https://www.belk.com/search/?q=Timex+MK1+Automatic",
+   "checked": "2026-10-17T01:48:32Z",
    "stale": false,
+   "in_stock": true,
    "note": "",
    "offers": [
     {
+     "retailer": "Belk",
+     "price": 174.0,
+     "url": "https://www.belk.com/search/?q=Timex+MK1+Automatic",
+     "in_stock": true
+    },
+    {
      "retailer": "Timex.com",
      "price": 309.0,
-     "url": "https://timex.com/collections/mk1-watches"
+     "url": "https://timex.com/collections/mk1-watches",
+     "in_stock": true
     }
    ],
    "history": [
@@ -62,6 +76,10 @@
     [
      "2026-10-17T01:34:29Z",
      309.0
+    ],
+    [
+     "2026-10-17T01:48:32Z",
+     174.0
     ]
    ]
   },
@@ -76,14 +94,16 @@
    "off_regular": 0.0,
    "status": "above",
    "buy_url": "https://timex.com/collections/automatic-watches",
-   "checked": "2026-10-17T01:34:29Z",
+   "checked": "2026-10-17T01:48:32Z",
    "stale": false,
+   "in_stock": true,
    "note": "",
    "offers": [
     {
      "retailer": "Timex.com",
      "price": 309.0,
-     "url": "https://timex.com/collections/automatic-watches"
+     "url": "https://timex.com/collections/automatic-watches",
+     "in_stock": true
     }
    ],
    "history": [
@@ -94,6 +114,10 @@
     [
      "2026-10-17T01:34:29Z",
      309.0
+    ],
+    [
+     "2026-10-17T01:48:32Z",
+     309.0
     ]
    ]
   },
@@ -101,21 +125,29 @@
    "id": "eline",
    "watch": "Timex Automatic E Line",
    "ref": "38mm",
-   "retailer": "Timex.com",
-   "today": 379.0,
-   "past_low": 379.0,
-   "regular": 379.0,
-   "off_regular": 0.0,
-   "status": "at_low",
-   "buy_url": "https://timex.com/collections/timex-e-line",
-   "checked": "2026-10-17T01:34:29Z",
+   "retailer": "Belk",
+   "today": 196.0,
+   "past_low": 196.0,
+   "regular": 200.0,
+   "off_regular": 2.0,
+   "status": "new_low",
+   "buy_url": "https://www.belk.com/search/?q=Timex+Automatic+E+Line+38mm",
+   "checked": "2026-10-17T01:48:32Z",
    "stale": false,
+   "in_stock": true,
    "note": "",
    "offers": [
     {
+     "retailer": "Belk",
+     "price": 196.0,
+     "url": "https://www.belk.com/search/?q=Timex+Automatic+E+Line+38mm",
+     "in_stock": true
+    },
+    {
      "retailer": "Timex.com",
      "price": 379.0,
-     "url": "https://timex.com/collections/timex-e-line"
+     "url": "https://timex.com/collections/timex-e-line",
+     "in_stock": true
     }
    ],
    "history": [
@@ -126,6 +158,10 @@
     [
      "2026-10-17T01:34:29Z",
      379.0
+    ],
+    [
+     "2026-10-17T01:48:32Z",
+     196.0
     ]
    ]
   },
@@ -142,7 +178,8 @@
    "buy_url": "https://www.casio.com/us/",
    "checked": "2026-10-17T01:00:00Z",
    "stale": true,
-   "note": "https://www.casio.com/us/watches/casio/product.F-B100W-1B/: HTTPError HTTP Error 403: Forbidden; no price at https://teddybaldassarre.com",
+   "in_stock": true,
+   "note": "https://www.casio.com/us/watches/casio/product.F-B100W-1B/: OSError browser got HTTP 403; no price at https://teddybaldassarre.com; https://www.macys.com/shop/featured/{q}: OSError browser got HTTP 403; no price at https://www.belk.com/search/?q={q}; https://www.jcpenney.com/s?searchTerm={q}: Error ",
    "offers": [],
    "history": [
     [
@@ -164,7 +201,8 @@
    "buy_url": "https://www.casio.com/us/",
    "checked": "2026-10-17T01:00:00Z",
    "stale": true,
-   "note": "https://www.casio.com/us/watches/casio/product.F-B100W-1A/: HTTPError HTTP Error 403: Forbidden; no price at https://teddybaldassarre.com",
+   "in_stock": true,
+   "note": "https://www.casio.com/us/watches/casio/product.F-B100W-1A/: OSError browser got HTTP 403; no price at https://teddybaldassarre.com; https://www.macys.com/shop/featured/{q}: OSError browser got HTTP 403; no price at https://www.belk.com/search/?q={q}; https://www.jcpenney.com/s?searchTerm={q}: Error ",
    "offers": [],
    "history": [
     [
@@ -186,7 +224,8 @@
    "buy_url": "https://www.casio.com/us/",
    "checked": "2026-10-17T01:00:00Z",
    "stale": true,
-   "note": "https://www.casio.com/us/watches/edifice/product.EFK-110D-1A/: HTTPError HTTP Error 403: Forbidden; no price at https://teddybaldassarre.com",
+   "in_stock": true,
+   "note": "https://www.casio.com/us/watches/edifice/product.EFK-110D-1A/: OSError browser got HTTP 403; no price at https://teddybaldassarre.com; https://www.macys.com/shop/featured/{q}: OSError browser got HTTP 403; https://www.belk.com/search/?q={q}: OSError browser got HTTP 403; https://www.jcpenney.com/s?s",
    "offers": [],
    "history": [
     [
@@ -208,7 +247,8 @@
    "buy_url": "https://www.casio.com/us/",
    "checked": "2026-10-17T01:00:00Z",
    "stale": true,
-   "note": "https://www.casio.com/us/watches/edifice/product.EFK-110D-2A/: HTTPError HTTP Error 403: Forbidden; no price at https://teddybaldassarre.com",
+   "in_stock": true,
+   "note": "https://www.casio.com/us/watches/edifice/product.EFK-110D-2A/: OSError browser got HTTP 403; no price at https://teddybaldassarre.com; https://www.macys.com/shop/featured/{q}: OSError browser got HTTP 403; https://www.belk.com/search/?q={q}: OSError browser got HTTP 403; https://www.jcpenney.com/s?s",
    "offers": [],
    "history": [
     [
@@ -228,14 +268,16 @@
    "off_regular": 0.0,
    "status": "above",
    "buy_url": "https://www.majestyjewelers.com/citizen-nj0151-53m",
-   "checked": "2026-10-17T01:34:29Z",
+   "checked": "2026-10-17T01:48:32Z",
    "stale": false,
+   "in_stock": true,
    "note": "",
    "offers": [
     {
      "retailer": "Majesty Jewelers",
      "price": 355.0,
-     "url": "https://www.majestyjewelers.com/citizen-nj0151-53m"
+     "url": "https://www.majestyjewelers.com/citizen-nj0151-53m",
+     "in_stock": true
     }
    ],
    "history": [
@@ -245,6 +287,10 @@
     ],
     [
      "2026-10-17T01:34:29Z",
+     355.0
+    ],
+    [
+     "2026-10-17T01:48:32Z",
      355.0
     ]
    ]
@@ -260,14 +306,16 @@
    "off_regular": 35.2,
    "status": "at_low",
    "buy_url": "https://orientwatchusa.com/products/ra-ag0002s30b",
-   "checked": "2026-10-17T01:34:29Z",
+   "checked": "2026-10-17T01:48:32Z",
    "stale": false,
+   "in_stock": true,
    "note": "",
    "offers": [
     {
      "retailer": "Orient Watch USA",
      "price": 295.0,
-     "url": "https://orientwatchusa.com/products/ra-ag0002s30b"
+     "url": "https://orientwatchusa.com/products/ra-ag0002s30b",
+     "in_stock": true
     }
    ],
    "history": [
@@ -278,6 +326,10 @@
     [
      "2026-10-17T01:34:29Z",
      295.0
+    ],
+    [
+     "2026-10-17T01:48:32Z",
+     295.0
     ]
    ]
   },
@@ -286,20 +338,32 @@
    "watch": "Seiko 5 Sports SNXS",
    "ref": "SRPK89",
    "retailer": "Seiko USA",
-   "today": 395.0,
+   "today": 415.0,
    "past_low": 395.0,
    "regular": 415.0,
-   "off_regular": 4.8,
-   "status": "at_low",
+   "off_regular": 0.0,
+   "status": "above",
    "buy_url": "https://seikousa.com/products/srpk89",
-   "checked": "2026-10-17T01:00:00Z",
-   "stale": true,
-   "note": "no price at https://seikousa.com/products/srpk89; no price at https://teddybaldassarre.com",
-   "offers": [],
+   "checked": "2026-10-17T01:48:32Z",
+   "stale": false,
+   "in_stock": false,
+   "note": "",
+   "offers": [
+    {
+     "retailer": "Seiko USA",
+     "price": 415.0,
+     "url": "https://seikousa.com/products/srpk89",
+     "in_stock": false
+    }
+   ],
    "history": [
     [
      "2026-10-17T01:00:00Z",
      395.0
+    ],
+    [
+     "2026-10-17T01:48:32Z",
+     415.0
     ]
    ]
   }
