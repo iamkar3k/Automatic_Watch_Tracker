@@ -11,3 +11,25 @@ Date,Watch,Model/Ref,Retailer,Price USD,List/Regular USD,Source type,Notes,URL
 2026-10-17,Orient Bambino Open Heart,RA-AG0002S30B (white),Orient Watch USA,295,455,search snippet,Sale price; US availability unclear,https://orientwatchusa.com/products/ra-ag0002s30b
 2026-10-17,Orient Bambino Open Heart,RA-AG0005L30B (blue),Orient Watch USA,295,455,search snippet,Sale price; US availability unclear,https://orientwatchusa.com/products/ra-ag0005l30b
 2026-10-17,Seiko 5 Sports SNXS,SRPK89 etc,Sakura Watches,285,395,search snippet,Retailer; MSRP 395; no Seiko US live price found,https://www.sakurawatches.com/watches/seiko-watches/filter/19-collection,5-sports
+2026-10-28,Timex Marlin 1965 Reissue Hand-Wound,TW2R47900,Timex.com,259,259,search snippet,In stock per Timex listing; Watches.com 249,https://www.timex.com/
+2026-10-28,Timex MK1 Automatic,TW2Y71800 / fabric,Timex.com,309,309,search snippet,No markdown seen (one page shows 299),https://timex.com/collections/mk1-watches
+2026-10-28,Timex Marlin Draper Automatic,37mm,Timex.com,279,309,search snippet,Leather 279; bracelet 309 (one page shows 249),https://timex.com/collections/automatic-watches
+2026-10-28,Timex Automatic E Line,38mm TW6A00500,Timex.com,379,379,search snippet,Two-tone 399,https://timex.com/collections/timex-e-line
+2026-10-28,Casio FB100W-1B,F-B100W-1B,Casio.com US,64.95,64.95,search snippet,,https://www.casio.com/us/
+2026-10-28,Casio FB100W-1A,F-B100W-1A,Casio.com US,64.95,64.95,search snippet,,https://www.casio.com/us/
+2026-10-28,Casio Edifice EFK110D-1A,EFK-110D-1A,Casio.com US,300,300,search snippet,,https://www.casio.com/us/
+2026-10-28,Casio Edifice EFK110D-2A,EFK-110D-2A,Casio.com US,300,300,search snippet,,https://www.casio.com/us/
+2026-10-28,TSUYOSA NJ015 sunray sky blue,NJ0151-53M,Citizen US,306,450,search snippet,Black Friday promo per snippet; could not verify live,https://www.citizenwatch.com/us/en/product/NJ0151-53M.html
+2026-10-28,Orient Bambino Open Heart,RA-AG0003S30B,Orient Watch USA,315,490,search snippet,Different ref than target; out of stock; AG0002S30B price not found,https://www.orientwatchusa.com/products/ra-ag0003s30b
+2026-10-28,Seiko 5 Sports SNXS,SRPK89,US authorized dealers,415,415,search snippet,Dealers list 415; earlier 285 Sakura figure unverified,https://www.exquisitetimepieces.com/products/seiko-5-sports-srpk89
+2026-10-29,Timex Marlin 1965 Reissue Hand-Wound,TW2R47900,Timex.com,259,259,search snippet,Timex.com 259 in stock; Watches.com 249 (not logged as price); equal to past low,https://www.timex.com/
+2026-10-29,Timex MK1 Automatic,TW2Y71800 / fabric,Timex.com,309,309,search snippet,Unchanged,https://timex.com/collections/mk1-watches
+2026-10-29,Timex Marlin Draper Automatic,37mm,Timex.com,279,309,search snippet,Leather 279; bracelet 309; unchanged,https://timex.com/collections/automatic-watches
+2026-10-29,Timex Automatic E Line,38mm TW6A00500,Timex.com,379,379,search snippet,Two-tone 399; unchanged,https://timex.com/collections/timex-e-line
+2026-10-29,Casio FB100W-1B,F-B100W-1B,Casio.com US,64.95,64.95,search snippet,Casio.com not directly reachable; list price per press,https://www.casio.com/us/
+2026-10-29,Casio FB100W-1A,F-B100W-1A,Casio.com US,64.95,64.95,search snippet,Casio.com not directly reachable; list price per press,https://www.casio.com/us/
+2026-10-29,Casio Edifice EFK110D-1A,EFK-110D-1A,Casio.com US,300,300,search snippet,List price per press; unchanged,https://www.casio.com/us/
+2026-10-29,Casio Edifice EFK110D-2A,EFK-110D-2A,Casio.com US,300,300,search snippet,List price per press; unchanged,https://www.casio.com/us/
+2026-10-29,TSUYOSA NJ015 sunray sky blue,NJ0151-53M,Citizen US,306,450,search snippet,Citizen US shows 306 with Black Friday banner; equal to past low; Black Friday is Nov 27,https://citizenwatch.com/us/en/product/NJ0151-53M.html
+2026-10-29,Orient Bambino Open Heart,RA-AG0002S30B,Orient Watch USA,,,not found,No official price for target ref; only 0003S30B at 315 (out of stock); resale excluded,https://www.orientwatchusa.com/products/ra-ag0003s30b
+2026-10-29,Seiko 5 Sports SNXS,SRPK89,Right Time (authorized),332,415,search snippet,Authorized dealer sale 332 vs 415 regular,https://www.righttime.com/rt/seiko_core/srpk89_a.htm
