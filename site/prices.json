@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-29T21:50:30Z",
+ "updated": "2026-10-30T15:58:47Z",
  "watches": [
   {
    "id": "marlin1965",
@@ -12,7 +12,7 @@
    "off_regular": 0.0,
    "status": "at_low",
    "buy_url": "https://timex.com/products/marlin-1965-reissue-hand-wound-34mm-leather-strap-watch-tw2r47900",
-   "checked": "2026-10-29T21:50:30Z",
+   "checked": "2026-10-30T15:58:47Z",
    "stale": false,
    "in_stock": true,
    "note": "",
@@ -196,6 +196,10 @@
     [
      "2026-10-29T21:50:30Z",
      259.0
+    ],
+    [
+     "2026-10-30T15:58:47Z",
+     259.0
     ]
    ]
   },
@@ -210,7 +214,7 @@
    "off_regular": 0.0,
    "status": "above",
    "buy_url": "https://timex.com/collections/mk1-watches",
-   "checked": "2026-10-29T21:50:30Z",
+   "checked": "2026-10-30T15:58:47Z",
    "stale": false,
    "in_stock": true,
    "note": "",
@@ -394,6 +398,10 @@
     [
      "2026-10-29T21:50:30Z",
      309.0
+    ],
+    [
+     "2026-10-30T15:58:47Z",
+     309.0
     ]
    ]
   },
@@ -408,7 +416,7 @@
    "off_regular": 0.0,
    "status": "above",
    "buy_url": "https://timex.com/collections/automatic-watches",
-   "checked": "2026-10-29T21:50:30Z",
+   "checked": "2026-10-30T15:58:47Z",
    "stale": false,
    "in_stock": true,
    "note": "",
@@ -592,6 +600,10 @@
     [
      "2026-10-29T21:50:30Z",
      309.0
+    ],
+    [
+     "2026-10-30T15:58:47Z",
+     309.0
     ]
    ]
   },
@@ -606,7 +618,7 @@
    "off_regular": 0.0,
    "status": "at_low",
    "buy_url": "https://timex.com/collections/timex-e-line",
-   "checked": "2026-10-29T21:50:30Z",
+   "checked": "2026-10-30T15:58:47Z",
    "stale": false,
    "in_stock": true,
    "note": "",
@@ -789,6 +801,10 @@
     ],
     [
      "2026-10-29T21:50:30Z",
+     379.0
+    ],
+    [
+     "2026-10-30T15:58:47Z",
      379.0
     ]
    ]
@@ -1079,7 +1095,7 @@
    "off_regular": 35.2,
    "status": "at_low",
    "buy_url": "https://orientwatchusa.com/products/ra-ag0002s30b",
-   "checked": "2026-10-29T21:50:30Z",
+   "checked": "2026-10-30T15:58:47Z",
    "stale": false,
    "in_stock": true,
    "note": "",
@@ -1263,6 +1279,10 @@
     [
      "2026-10-29T21:50:30Z",
      295.0
+    ],
+    [
+     "2026-10-30T15:58:47Z",
+     295.0
     ]
    ]
   },
@@ -1277,7 +1297,7 @@
    "off_regular": 0.0,
    "status": "above",
    "buy_url": "https://seikousa.com/products/srpk89",
-   "checked": "2026-10-29T21:50:30Z",
+   "checked": "2026-10-30T15:58:47Z",
    "stale": false,
    "in_stock": true,
    "note": "",
@@ -1456,6 +1476,10 @@
     ],
     [
      "2026-10-29T21:50:30Z",
+     415.0
+    ],
+    [
+     "2026-10-30T15:58:47Z",
      415.0
     ]
    ]
