@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-08T22:56:04Z",
+ "updated": "2026-11-09T22:27:09Z",
  "watches": [
   {
    "id": "marlin1965",
@@ -12,7 +12,7 @@
    "off_regular": 0.0,
    "status": "at_low",
    "buy_url": "https://timex.com/products/marlin-1965-reissue-hand-wound-34mm-leather-strap-watch-tw2r47900",
-   "checked": "2026-11-08T22:56:04Z",
+   "checked": "2026-11-09T22:27:09Z",
    "stale": false,
    "in_stock": true,
    "note": "",
@@ -300,6 +300,10 @@
     [
      "2026-11-08T22:56:04Z",
      259.0
+    ],
+    [
+     "2026-11-09T22:27:09Z",
+     259.0
     ]
    ]
   },
@@ -314,7 +318,7 @@
    "off_regular": 0.0,
    "status": "above",
    "buy_url": "https://timex.com/collections/mk1-watches",
-   "checked": "2026-11-08T22:56:04Z",
+   "checked": "2026-11-09T22:27:09Z",
    "stale": false,
    "in_stock": true,
    "note": "",
@@ -602,6 +606,10 @@
     [
      "2026-11-08T22:56:04Z",
      309.0
+    ],
+    [
+     "2026-11-09T22:27:09Z",
+     309.0
     ]
    ]
   },
@@ -616,7 +624,7 @@
    "off_regular": 0.0,
    "status": "above",
    "buy_url": "https://timex.com/collections/automatic-watches",
-   "checked": "2026-11-08T22:56:04Z",
+   "checked": "2026-11-09T22:27:09Z",
    "stale": false,
    "in_stock": true,
    "note": "",
@@ -900,6 +908,10 @@
     [
      "2026-11-08T22:56:04Z",
      309.0
+    ],
+    [
+     "2026-11-09T22:27:09Z",
+     309.0
     ]
    ]
   },
@@ -914,7 +926,7 @@
    "off_regular": 0.0,
    "status": "at_low",
    "buy_url": "https://timex.com/collections/timex-e-line",
-   "checked": "2026-11-08T22:56:04Z",
+   "checked": "2026-11-09T22:27:09Z",
    "stale": false,
    "in_stock": true,
    "note": "",
@@ -1202,6 +1214,10 @@
     [
      "2026-11-08T22:56:04Z",
      379.0
+    ],
+    [
+     "2026-11-09T22:27:09Z",
+     379.0
     ]
    ]
   },
@@ -1308,7 +1324,7 @@
    "off_regular": 0.0,
    "status": "above",
    "buy_url": "https://www.majestyjewelers.com/citizen-nj0151-53m",
-   "checked": "2026-11-08T22:56:04Z",
+   "checked": "2026-11-09T22:27:09Z",
    "stale": false,
    "in_stock": true,
    "note": "",
@@ -1584,6 +1600,10 @@
     [
      "2026-11-08T22:56:04Z",
      355.0
+    ],
+    [
+     "2026-11-09T22:27:09Z",
+     355.0
     ]
    ]
   },
@@ -1598,7 +1618,7 @@
    "off_regular": 35.2,
    "status": "at_low",
    "buy_url": "https://orientwatchusa.com/products/ra-ag0002s30b",
-   "checked": "2026-11-08T22:56:04Z",
+   "checked": "2026-11-09T22:27:09Z",
    "stale": false,
    "in_stock": true,
    "note": "",
@@ -1886,6 +1906,10 @@
     [
      "2026-11-08T22:56:04Z",
      295.0
+    ],
+    [
+     "2026-11-09T22:27:09Z",
+     295.0
     ]
    ]
   },
@@ -1900,7 +1924,7 @@
    "off_regular": 0.0,
    "status": "above",
    "buy_url": "https://seikousa.com/products/srpk89",
-   "checked": "2026-11-08T22:56:04Z",
+   "checked": "2026-11-09T22:27:09Z",
    "stale": false,
    "in_stock": true,
    "note": "",
@@ -2183,6 +2207,10 @@
     ],
     [
      "2026-11-08T22:56:04Z",
+     415.0
+    ],
+    [
+     "2026-11-09T22:27:09Z",
      415.0
     ]
    ]
