@@ -41,6 +41,9 @@ jobs:
           playwright install --with-deps chromium
       - id: run
         if: steps.gate.outputs.due == 'true'
+        env:
+          EXA_API_KEY: ${{ secrets.EXA_API_KEY }}
+          FIRECRAWL_API_KEY: ${{ secrets.FIRECRAWL_API_KEY }}
         run: |
           if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then export FORCE=1; fi
           if [ "${{ github.event_name }}" = "push" ]; then echo "ran=true" >> "$GITHUB_OUTPUT"; exit 0; fi
